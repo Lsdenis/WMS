@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WarehouseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cells">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="WarehouseId" Type="int" Nullable="false" />
+          <Property Name="MaxValue" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Consignments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="DeliveredDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Goods">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConsignmentId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Count" Type="int" />
+          <Property Name="AddingDate" Type="date" />
+        </EntityType>
+        <EntityType Name="GoodsInCells">
+          <Key>
+            <PropertyRef Name="GoodId" />
+            <PropertyRef Name="CellId" />
+          </Key>
+          <Property Name="GoodId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CellId" Type="int" Nullable="false" />
+          <Property Name="Value" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Warehouses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_Cells_Warehouses">
+          <End Role="Warehouses" Type="Self.Warehouses" Multiplicity="1" />
+          <End Role="Cells" Type="Self.Cells" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Warehouses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Cells">
+              <PropertyRef Name="WarehouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Goods_Consignments">
+          <End Role="Consignments" Type="Self.Consignments" Multiplicity="1" />
+          <End Role="Goods" Type="Self.Goods" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Consignments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Goods">
+              <PropertyRef Name="ConsignmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GoodsInCells_Cells">
+          <End Role="Cells" Type="Self.Cells" Multiplicity="1" />
+          <End Role="GoodsInCells" Type="Self.GoodsInCells" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cells">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GoodsInCells">
+              <PropertyRef Name="CellId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GoodsInCells_Goods">
+          <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+          <End Role="GoodsInCells" Type="Self.GoodsInCells" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Goods">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GoodsInCells">
+              <PropertyRef Name="GoodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WarehouseModelStoreContainer">
+          <EntitySet Name="Cells" EntityType="Self.Cells" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Consignments" EntityType="Self.Consignments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Goods" EntityType="Self.Goods" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GoodsInCells" EntityType="Self.GoodsInCells" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Warehouses" EntityType="Self.Warehouses" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Cells_Warehouses" Association="Self.FK_Cells_Warehouses">
+            <End Role="Warehouses" EntitySet="Warehouses" />
+            <End Role="Cells" EntitySet="Cells" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Goods_Consignments" Association="Self.FK_Goods_Consignments">
+            <End Role="Consignments" EntitySet="Consignments" />
+            <End Role="Goods" EntitySet="Goods" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GoodsInCells_Cells" Association="Self.FK_GoodsInCells_Cells">
+            <End Role="Cells" EntitySet="Cells" />
+            <End Role="GoodsInCells" EntitySet="GoodsInCells" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GoodsInCells_Goods" Association="Self.FK_GoodsInCells_Goods">
+            <End Role="Goods" EntitySet="Goods" />
+            <End Role="GoodsInCells" EntitySet="GoodsInCells" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WarehouseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="WarehouseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cells" EntityType="WarehouseModel.Cell" />
+          <EntitySet Name="Consignments" EntityType="WarehouseModel.Consignment" />
+          <EntitySet Name="Goods" EntityType="WarehouseModel.Good" />
+          <EntitySet Name="GoodsInCells" EntityType="WarehouseModel.GoodsInCell" />
+          <EntitySet Name="sysdiagrams" EntityType="WarehouseModel.sysdiagram" />
+          <EntitySet Name="Users" EntityType="WarehouseModel.User" />
+          <EntitySet Name="Warehouses" EntityType="WarehouseModel.Warehouse" />
+          <AssociationSet Name="FK_Cells_Warehouses" Association="WarehouseModel.FK_Cells_Warehouses">
+            <End Role="Warehouse" EntitySet="Warehouses" />
+            <End Role="Cell" EntitySet="Cells" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GoodsInCells_Cells" Association="WarehouseModel.FK_GoodsInCells_Cells">
+            <End Role="Cell" EntitySet="Cells" />
+            <End Role="GoodsInCell" EntitySet="GoodsInCells" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Goods_Consignments" Association="WarehouseModel.FK_Goods_Consignments">
+            <End Role="Consignment" EntitySet="Consignments" />
+            <End Role="Good" EntitySet="Goods" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GoodsInCells_Goods" Association="WarehouseModel.FK_GoodsInCells_Goods">
+            <End Role="Good" EntitySet="Goods" />
+            <End Role="GoodsInCell" EntitySet="GoodsInCells" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Cell">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="WarehouseId" Type="Int32" Nullable="false" />
+          <Property Name="MaxValue" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Warehouse" Relationship="WarehouseModel.FK_Cells_Warehouses" FromRole="Cell" ToRole="Warehouse" />
+          <NavigationProperty Name="GoodsInCells" Relationship="WarehouseModel.FK_GoodsInCells_Cells" FromRole="Cell" ToRole="GoodsInCell" />
+        </EntityType>
+        <EntityType Name="Consignment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveredDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Goods" Relationship="WarehouseModel.FK_Goods_Consignments" FromRole="Consignment" ToRole="Good" />
+        </EntityType>
+        <EntityType Name="Good">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConsignmentId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Count" Type="Int32" />
+          <Property Name="AddingDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Consignment" Relationship="WarehouseModel.FK_Goods_Consignments" FromRole="Good" ToRole="Consignment" />
+          <NavigationProperty Name="GoodsInCells" Relationship="WarehouseModel.FK_GoodsInCells_Goods" FromRole="Good" ToRole="GoodsInCell" />
+        </EntityType>
+        <EntityType Name="GoodsInCell">
+          <Key>
+            <PropertyRef Name="GoodId" />
+            <PropertyRef Name="CellId" />
+          </Key>
+          <Property Name="GoodId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CellId" Type="Int32" Nullable="false" />
+          <Property Name="Value" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cell" Relationship="WarehouseModel.FK_GoodsInCells_Cells" FromRole="GoodsInCell" ToRole="Cell" />
+          <NavigationProperty Name="Good" Relationship="WarehouseModel.FK_GoodsInCells_Goods" FromRole="GoodsInCell" ToRole="Good" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Warehouse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Cells" Relationship="WarehouseModel.FK_Cells_Warehouses" FromRole="Warehouse" ToRole="Cell" />
+        </EntityType>
+        <Association Name="FK_Cells_Warehouses">
+          <End Type="WarehouseModel.Warehouse" Role="Warehouse" Multiplicity="1" />
+          <End Type="WarehouseModel.Cell" Role="Cell" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Warehouse">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Cell">
+              <PropertyRef Name="WarehouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GoodsInCells_Cells">
+          <End Type="WarehouseModel.Cell" Role="Cell" Multiplicity="1" />
+          <End Type="WarehouseModel.GoodsInCell" Role="GoodsInCell" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cell">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GoodsInCell">
+              <PropertyRef Name="CellId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Goods_Consignments">
+          <End Type="WarehouseModel.Consignment" Role="Consignment" Multiplicity="1" />
+          <End Type="WarehouseModel.Good" Role="Good" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Consignment">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Good">
+              <PropertyRef Name="ConsignmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GoodsInCells_Goods">
+          <End Type="WarehouseModel.Good" Role="Good" Multiplicity="1" />
+          <End Type="WarehouseModel.GoodsInCell" Role="GoodsInCell" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Good">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GoodsInCell">
+              <PropertyRef Name="GoodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WarehouseModelStoreContainer" CdmEntityContainer="WarehouseEntities">
+          <EntitySetMapping Name="Cells">
+            <EntityTypeMapping TypeName="WarehouseModel.Cell">
+              <MappingFragment StoreEntitySet="Cells">
+                <ScalarProperty Name="MaxValue" ColumnName="MaxValue" />
+                <ScalarProperty Name="WarehouseId" ColumnName="WarehouseId" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Consignments">
+            <EntityTypeMapping TypeName="WarehouseModel.Consignment">
+              <MappingFragment StoreEntitySet="Consignments">
+                <ScalarProperty Name="DeliveredDate" ColumnName="DeliveredDate" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Goods">
+            <EntityTypeMapping TypeName="WarehouseModel.Good">
+              <MappingFragment StoreEntitySet="Goods">
+                <ScalarProperty Name="AddingDate" ColumnName="AddingDate" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ConsignmentId" ColumnName="ConsignmentId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GoodsInCells">
+            <EntityTypeMapping TypeName="WarehouseModel.GoodsInCell">
+              <MappingFragment StoreEntitySet="GoodsInCells">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="CellId" ColumnName="CellId" />
+                <ScalarProperty Name="GoodId" ColumnName="GoodId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="WarehouseModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="WarehouseModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Warehouses">
+            <EntityTypeMapping TypeName="WarehouseModel.Warehouse">
+              <MappingFragment StoreEntitySet="Warehouses">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

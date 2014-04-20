@@ -12,7 +12,8 @@
         <TextBox Name="txtLogin" Height="23" Margin="10,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="193"/>
         <TextBox Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="10,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="193"/>
 
-        <Buttons:BlueButton Name="BlueButton" HorizontalAlignment="Left" Text="Login" Margin="105,205,0,0" VerticalAlignment="Top" Height="30" Width="98" />
+        <Buttons:BlueButton Name="BlueButton" HorizontalAlignment="Left" Text="Login" Margin="113,205,0,0" VerticalAlignment="Top" Height="30" Width="90" />
+        <Buttons:RedButton Text="Close" HorizontalAlignment="Left" Margin="10,205,0,0" VerticalAlignment="Top" Width="90"/>
 
     </Grid>
 </baseWindow:BaseWindow>

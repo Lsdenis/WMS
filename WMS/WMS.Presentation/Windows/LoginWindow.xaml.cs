@@ -1,6 +1,4 @@
-﻿using System;
-using System.Windows;
-using WMS.BusinessLogic.Services;
+﻿using System.Windows;
 using WMS.BusinessLogic.UnitOfwork;
 using WMS.CustomControls.Controls.BaseWindow;
 
@@ -19,12 +17,6 @@ namespace WMS.Presentation.Windows
 
 		private void Click(object sender, RoutedEventArgs routedEventArgs)
 		{
-//			var uS = new UserService(Context);
-//			if (!uS.IsUserExists(txtLogin.Text, txtPassword.Text))
-//			{
-//				MessageBox.Show("No such user");
-//				return;
-//			}
 			using (var uow = new UnitOfWork())
 			{
 				if (!uow.Users.IsUserExists(txtLogin.Text, txtPassword.Text))

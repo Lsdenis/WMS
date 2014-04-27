@@ -18,14 +18,7 @@ namespace WMS.BusinessLogic.UnitOfwork
 		#region Properties
 		public IUserRepository Users
 		{
-			get
-			{
-				if (_userRepository == null)
-				{
-					_userRepository = new UserRepository(_context);
-				}
-				return _userRepository;
-			}
+			get { return _userRepository ?? (_userRepository = new UserRepository(_context)); }
 		}
 		#endregion
 
@@ -53,7 +46,6 @@ namespace WMS.BusinessLogic.UnitOfwork
 
 		public void Dispose()
 		{
-			//magic?
 			Dispose(true);
 			GC.SuppressFinalize(this);
 		}

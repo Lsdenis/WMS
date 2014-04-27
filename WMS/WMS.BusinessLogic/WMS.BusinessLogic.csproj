@@ -39,6 +39,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -60,10 +61,13 @@
     <Compile Include="DataModel\GoodsInCell.cs">
       <DependentUpon>WMS.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataModel\sysdiagram.cs">
+    <Compile Include="DataModel\LoginedUser.cs">
       <DependentUpon>WMS.tt</DependentUpon>
     </Compile>
     <Compile Include="DataModel\User.cs">
+      <DependentUpon>WMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\UserCart.cs">
       <DependentUpon>WMS.tt</DependentUpon>
     </Compile>
     <Compile Include="DataModel\Warehouse.cs">
@@ -85,17 +89,19 @@
       <DependentUpon>WMS.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Classes\UserRepository.cs" />
+    <Compile Include="Repository\Interfaces\IUserRepository.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="UnitOfwork\IUnitOfWork.cs" />
+    <Compile Include="UnitOfwork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="DataModel\WMS.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>WMS.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="DataModel\WMS.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>WMS.edmx</DependentUpon>

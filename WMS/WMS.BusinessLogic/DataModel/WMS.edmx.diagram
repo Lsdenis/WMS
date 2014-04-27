@@ -4,18 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d1879f4c72ce47af93ff9d6ffee636df" Name="Diagram1">
-        <EntityTypeShape EntityType="WarehouseModel.Cell" Width="1.5" PointX="3" PointY="0.875" />
-        <EntityTypeShape EntityType="WarehouseModel.Consignment" Width="1.5" PointX="0.75" PointY="5.125" />
-        <EntityTypeShape EntityType="WarehouseModel.Good" Width="1.5" PointX="3" PointY="4.875" />
-        <EntityTypeShape EntityType="WarehouseModel.GoodsInCell" Width="1.5" PointX="5.25" PointY="1" />
-        <EntityTypeShape EntityType="WarehouseModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" />
-        <EntityTypeShape EntityType="WarehouseModel.User" Width="1.5" PointX="7.75" PointY="0.75" />
-        <EntityTypeShape EntityType="WarehouseModel.Warehouse" Width="1.5" PointX="0.75" PointY="1.25" />
-        <AssociationConnector Association="WarehouseModel.FK_Cells_Warehouses" />
-        <AssociationConnector Association="WarehouseModel.FK_GoodsInCells_Cells" />
-        <AssociationConnector Association="WarehouseModel.FK_Goods_Consignments" />
-        <AssociationConnector Association="WarehouseModel.FK_GoodsInCells_Goods" />
+      <Diagram DiagramId="e4847b1139274af09f8e3a7404d0182f" Name="Diagram1">
+        <EntityTypeShape EntityType="WarehouseModel.Cell" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Consignment" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Good" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.GoodsInCell" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.LoginedUser" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.UserCart" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.User" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehouseModel.Warehouse" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="WarehouseModel.FK_Cells_Warehouses" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehouseModel.FK_GoodsInCells_Cells" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehouseModel.FK_Goods_Consignments" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehouseModel.FK_GoodsInCells_Goods" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehouseModel.FK_UserCart_Goods" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehouseModel.FK_LoginedUsers_Users" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

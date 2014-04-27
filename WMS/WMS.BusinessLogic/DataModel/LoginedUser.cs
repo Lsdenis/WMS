@@ -12,17 +12,11 @@ namespace WMS.BusinessLogic.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class Consignment
+    public partial class LoginedUser
     {
-        public Consignment()
-        {
-            this.Goods = new HashSet<Good>();
-        }
-    
         public int Id { get; set; }
-        public string Name { get; set; }
-        public System.DateTime DeliveredDate { get; set; }
+        public int UserId { get; set; }
     
-        public virtual ICollection<Good> Goods { get; set; }
+        public virtual User User { get; set; }
     }
 }

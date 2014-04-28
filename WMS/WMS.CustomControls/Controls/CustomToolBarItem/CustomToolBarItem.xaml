@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="WMS.CustomControls.Controls.CustomToolBarItem.CustomToolBarItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="105" Width="70">
+    <Grid>
+        <Button BorderThickness="0" Name="ToolBarButton" VerticalAlignment="Top" Height="64" Margin="3,2,3,0">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}"
+                BasedOn="{StaticResource mainLobbyBtnStyle}">
+                    <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value ="true">
+                    <Setter Property="Background" Value="Beige"></Setter>
+                </Trigger>
+            </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            <StackPanel Orientation="Horizontal">
+                <Image Name="Image" Width="64" Height="64" Margin="0,0,0,0"/>
+            </StackPanel>
+        </Button>
+        <TextBlock Name="ToolBarTetBlock" TextWrapping="Wrap" VerticalAlignment="Top" Margin="3,71,3,0" TextAlignment="Center"/>
+
+    </Grid>
+
+</UserControl>

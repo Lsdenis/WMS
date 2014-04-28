@@ -12,10 +12,11 @@ namespace WMS.Presentation.Windows
 		public LoginWindow()
 		{
 			InitializeComponent();
-			BlueButton.Click = Click;
+			BlueButton.Click = BBClick;
+			RedButton.Click = (sender, args) => Close();
 		}
 
-		private void Click(object sender, RoutedEventArgs routedEventArgs)
+		private void BBClick(object sender, RoutedEventArgs routedEventArgs)
 		{
 			using (var uow = new UnitOfWork())
 			{
@@ -27,6 +28,7 @@ namespace WMS.Presentation.Windows
 
 			var window = new MainMenuWindow();
 			window.Show();
+			Hide();
 		}
 	}
 }

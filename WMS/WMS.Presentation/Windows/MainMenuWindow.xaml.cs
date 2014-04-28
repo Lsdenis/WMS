@@ -1,4 +1,5 @@
-﻿using WMS.CustomControls.Controls.BaseWindow;
+﻿using System.Windows;
+using WMS.CustomControls.Controls.BaseWindow;
 
 namespace WMS.Presentation.Windows
 {
@@ -11,5 +12,10 @@ namespace WMS.Presentation.Windows
         {
             InitializeComponent();
         }
+
+	    private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+	    {
+		    MessageBox.Show("ToolBar button clicked");
+	    }
     }
 }

@@ -1,0 +1,27 @@
+﻿<baseWindow:BaseWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:baseWindow="clr-namespace:WMS.CustomControls.Controls.BaseWindow;assembly=WMS.CustomControls"
+        xmlns:Buttons="clr-namespace:WMS.CustomControls.Controls.Buttons;assembly=WMS.CustomControls" xmlns:Controls="clr-namespace:WMS.CustomControls.Controls;assembly=WMS.CustomControls" x:Class="WMS.Presentation.Windows.GoodsWindow"
+        Title="GoodsWindow" Height="425.05" Width="490">
+	<Grid>
+		<ListView x:Name="lvGoods" HorizontalAlignment="Left" Height="270" VerticalAlignment="Top" Width="456" Margin="10,76,0,0">
+			<ListView.View>
+				<GridView>
+					<GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding Name}"/>
+					<GridViewColumn Header="Consignment" Width="150" DisplayMemberBinding="{Binding Consignment}"/>
+					<GridViewColumn Header="Count" Width="50" DisplayMemberBinding="{Binding Count}"/>
+					<GridViewColumn Header="Adding date" Width="100" DisplayMemberBinding="{Binding AddingDateString}"/>
+				</GridView>
+			</ListView.View>
+		</ListView>
+		<Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="10,10,0,0" Height="33"/>
+		<Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="111,10,0,0" Height="33"/>
+		<TextBox HorizontalAlignment="Left" Height="23" Margin="10,48,0,0" TextWrapping="Wrap" Text="Search text box" VerticalAlignment="Top" Width="456"/>
+
+		<Buttons:RedButton x:Name ="RedButton" Text="Close" HorizontalAlignment="Left" Margin="366,351,0,0" VerticalAlignment="Top"/>
+
+		<Controls:LinkLabel Text="Advanced search" HorizontalAlignment="Left" Margin="376,10,0,0" VerticalAlignment="Top" Width="90"/>
+
+	</Grid>
+</baseWindow:BaseWindow>

@@ -7,13 +7,6 @@ namespace WMS.CustomControls.Controls.BaseWindow
 {
     public class BaseWindow : Window
     {
-        protected WarehouseEntities Context = new WarehouseEntities();
-
-        protected override void OnClosed(EventArgs e)
-        {
-            Context.SaveChanges();
-            Context.Dispose();
-            base.OnClosed(e);
-        }
+	    protected static User CurrentUser;
     }
 }

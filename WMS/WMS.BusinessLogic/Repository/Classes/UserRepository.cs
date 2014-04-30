@@ -15,7 +15,7 @@ namespace WMS.BusinessLogic.Repository.Classes
 			_context = context;
 		}
 
-		public List<User> GetListofUsers()
+		public List<User> GetListOfUsers()
 		{
 			return _context.Users.ToList();
 		}
@@ -44,21 +44,6 @@ namespace WMS.BusinessLogic.Repository.Classes
 				return;
 			}
 			_context.Users.Remove(existingUser);
-		}
-
-		public bool IsUserExists(User user)
-		{
-			return _context.Users.Any(usr => usr.Login == user.Login && usr.Password == user.Password);
-		}
-
-		public bool IsUserExists(string login, string password)
-		{
-			return _context.Users.Any(usr => usr.Login.Equals(login) && usr.Password.Equals(password));
-		}
-
-		public bool IsUserLogined(User user)
-		{
-			return _context.LoginedUsers.Any(usr => usr.UserId == user.Id);
 		}
 	}
 }

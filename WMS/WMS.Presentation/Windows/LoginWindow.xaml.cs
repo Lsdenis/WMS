@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
 using WMS.BusinessLogic.UnitOfwork;
 using WMS.CustomControls.Controls.BaseWindow;
 
@@ -13,20 +14,26 @@ namespace WMS.Presentation.Windows
 		{
 			InitializeComponent();
 			BlueButton.Click = Click;
+			RedButton.Click = (sender, args) => Close();
 		}
 
 		private void Click(object sender, RoutedEventArgs routedEventArgs)
 		{
 			using (var uow = new UnitOfWork())
 			{
-				if (!uow.Users.IsUserExists(txtLogin.Text, txtPassword.Text))
+				var users = uow.Users.GetListOfUsers();
+
+				CurrentUser = users.FirstOrDefault(usr => usr.Login.Equals(txtLogin.Text) && usr.Password.Equals(txtPassword.Text));
+
+				if (CurrentUser == null)
 				{
 					return;
 				}
 			}
 
-			var window = new MainMenuWindow();
+			var window = new MainMenuWindow(this);
 			window.Show();
+			Hide();
 		}
 	}
 }

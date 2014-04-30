@@ -23,8 +23,8 @@ namespace WMS.BusinessLogic.DataModel
         public int Id { get; set; }
         public int ConsignmentId { get; set; }
         public string Name { get; set; }
-        public Nullable<int> Count { get; set; }
-        public Nullable<System.DateTime> AddingDate { get; set; }
+        public int Count { get; set; }
+        public System.DateTime AddingDate { get; set; }
     
         public virtual Consignment Consignment { get; set; }
         public virtual ICollection<GoodsInCell> GoodsInCells { get; set; }

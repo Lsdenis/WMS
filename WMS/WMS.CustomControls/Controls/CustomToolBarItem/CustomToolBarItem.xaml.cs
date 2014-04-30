@@ -22,8 +22,8 @@ namespace WMS.CustomControls.Controls.CustomToolBarItem
 	{
 		public string Text
 		{
-			get { return ToolBarTetBlock.Text; }
-			set { ToolBarTetBlock.Text = value; }
+			get { return ToolBarTextBlock.Text; }
+			set { ToolBarTextBlock.Text = value; }
 		}
 
 		public ImageSource ButtonImage
@@ -32,12 +32,16 @@ namespace WMS.CustomControls.Controls.CustomToolBarItem
 			{
 				if (value != null)
 				{
-//					ToolBarButton.Background = new ImageBrush { ImageSource = value };
-					Image.Source = value;
+//					ToolBarButton.Content = value;
+					ToolBarButton.Background = new ImageBrush { ImageSource = value };
+					//					Image.Source = value;
 				}
 			}
+		}
 
-			get { return null; }
+		public RoutedEventHandler Click
+		{
+			set { ToolBarButton.Click += value; }
 		}
 
 		public CustomToolBarItem()

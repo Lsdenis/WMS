@@ -1,20 +1,16 @@
-﻿<baseWindow:BaseWindow x:Class="WMS.Presentation.Windows.MainMenuWindow"
+﻿<baseWindow:BaseWindow
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:baseWindow="clr-namespace:WMS.CustomControls.Controls.BaseWindow;assembly=WMS.CustomControls"
-        Title="MainMenuWindow" Height="483" Width="864">
-    <Grid>
-        <ToolBar VerticalAlignment="Top" Height="50">
-            <Button Height="50" Width="50" Click="ButtonBase_OnClick" >
-                <Button.Background>
-                    <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/wms_icon.png"/>
-                </Button.Background>
-            </Button>
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button/>
-        </ToolBar>
-
-    </Grid>
+        xmlns:CustomToolBarItem="clr-namespace:WMS.CustomControls.Controls.CustomToolBarItem;assembly=WMS.CustomControls" x:Class="WMS.Presentation.Windows.MainMenuWindow"
+        Title="MainMenuWindow" Height="483" Width="864" Closed="MainMenuWindow_OnClosed">
+	<Grid>
+		<ToolBar ToolBarTray.IsLocked ="True" OverflowMode="Never" VerticalAlignment="Top" Height="119" HeaderStringFormat="">
+			<CustomToolBarItem:CustomToolBarItem Text="Goods" Name="btnGoods" ButtonImage="/WMS.Presentation;component/Images/Good.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
+			<CustomToolBarItem:CustomToolBarItem Text="Cells" Name="btnCells" ButtonImage="/WMS.Presentation;component/Images/Shelf.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
+			<CustomToolBarItem:CustomToolBarItem Text="Basket" Name="btnBasket" ButtonImage="/WMS.Presentation;component/Images/Cart.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
+			<CustomToolBarItem:CustomToolBarItem Text="User Management" ButtonImage="/WMS.Presentation;component/Images/UM.png" Name ="btnUserManagement" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
+			<CustomToolBarItem:CustomToolBarItem Text="User" Name="btnUser" ButtonImage="/WMS.Presentation;component/Images/User.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
+		</ToolBar>
+	</Grid>
 </baseWindow:BaseWindow>

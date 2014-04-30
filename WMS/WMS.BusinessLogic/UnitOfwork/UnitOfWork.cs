@@ -13,6 +13,7 @@ namespace WMS.BusinessLogic.UnitOfwork
 		#region Repositories
 
 		private IUserRepository _userRepository;
+		private IGoodsRepository _goodsRepository;
 		#endregion
 
 		#region Properties
@@ -20,6 +21,15 @@ namespace WMS.BusinessLogic.UnitOfwork
 		{
 			get { return _userRepository ?? (_userRepository = new UserRepository(_context)); }
 		}
+
+		public IGoodsRepository Goods
+		{
+			get
+			{
+				return _goodsRepository ?? (_goodsRepository = new GoodsRepository(_context));
+			}
+		}
+
 		#endregion
 
 		public UnitOfWork()
@@ -27,7 +37,7 @@ namespace WMS.BusinessLogic.UnitOfwork
 			_context = new WarehouseEntities();
 		}
 
-		public void Save()
+		public void Commit()
 		{
 			_context.SaveChanges();
 		}

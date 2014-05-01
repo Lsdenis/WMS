@@ -47,5 +47,22 @@ namespace WMS.Presentation.Windows
 		{
 			lvGoods.Items.Add(good);
 		}
+
+		private void UIElement_OnKeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.Key == Key.Return)
+			{
+				lvGoods.Items.Clear();
+				using (var uow = new UnitOfWork())
+				{
+					var goods = uow.Goods.GetLVGoods().Where(gd => gd.Name.Contains(SearchTextBox.Text));
+
+					foreach (var good in goods)
+					{
+						AddGoodToListView(good);
+					}
+				}
+			}
+		}
 	}
 }

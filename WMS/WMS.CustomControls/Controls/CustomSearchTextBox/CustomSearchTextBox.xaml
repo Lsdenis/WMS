@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="WMS.CustomControls.Controls.CustomSearchTextBox.CustomSearchTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="25" Width="250">
+
+	<UserControl.Resources>
+		<ControlTemplate x:Key="SearchTextBox1" TargetType="{x:Type TextBox}">
+			<Grid>
+				<TextBox Name="SearchTextBox" Height="Auto" VerticalAlignment="Stretch"></TextBox>
+				<TextBlock Name="SearchTextBlock" Text=" Search" FontStyle="Italic" Foreground="SteelBlue" HorizontalAlignment="Left" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+			</Grid>
+			<ControlTemplate.Triggers>
+				<Trigger SourceName="SearchTextBox" Property="IsFocused" Value="True">
+					<Setter TargetName="SearchTextBlock" Property="Text" Value=""></Setter>
+				</Trigger>
+			</ControlTemplate.Triggers>
+		</ControlTemplate>
+	</UserControl.Resources>
+	<Grid>
+<!--		<TextBox Template="{StaticResource SearchTextBox1}" TextWrapping="Wrap" Text="TextBox"/>-->
+		<TextBox GotFocus="SearchTextBox_OnGotFocus" LostFocus="SearchTextBox_OnLostFocus" Name="SearchTextBox" Height="Auto" VerticalAlignment="Stretch"></TextBox>
+		<TextBlock Name="SearchTextBlock" Text=" Search" FontStyle="Italic" Foreground="SteelBlue" HorizontalAlignment="Left" TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+	</Grid>
+</UserControl>

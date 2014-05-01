@@ -74,6 +74,9 @@
     <Compile Include="Windows\GoodsWindow.xaml.cs">
       <DependentUpon>GoodsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\GoodWindow.xaml.cs">
+      <DependentUpon>GoodWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\GoodsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GoodWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -64,6 +64,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\CustomSearchTextBox\CustomSearchTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\CustomToolBarItem\CustomToolBarItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -88,6 +92,9 @@
     </Compile>
     <Compile Include="Controls\Buttons\BlueButton.xaml.cs">
       <DependentUpon>BlueButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomSearchTextBox\CustomSearchTextBox.xaml.cs">
+      <DependentUpon>CustomSearchTextBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\CustomToolBarItem\CustomToolBarItem.xaml.cs">
       <DependentUpon>CustomToolBarItem.xaml</DependentUpon>

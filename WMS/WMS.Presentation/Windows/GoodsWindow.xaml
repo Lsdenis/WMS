@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:baseWindow="clr-namespace:WMS.CustomControls.Controls.BaseWindow;assembly=WMS.CustomControls"
         xmlns:Buttons="clr-namespace:WMS.CustomControls.Controls.Buttons;assembly=WMS.CustomControls" xmlns:Controls="clr-namespace:WMS.CustomControls.Controls;assembly=WMS.CustomControls" xmlns:CustomSearchTextBox="clr-namespace:WMS.CustomControls.Controls.CustomSearchTextBox;assembly=WMS.CustomControls" x:Class="WMS.Presentation.Windows.GoodsWindow"
-        Title="GoodsWindow" Height="422" Width="490">
+        Title="GoodsWindow" Height="409" Width="488">
 	<Grid>
-		<ListView x:Name="lvGoods" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Left" Height="265" VerticalAlignment="Top" Width="456" Margin="10,77,0,0">
+		<ListView x:Name="lvGoods" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Left" Height="265" VerticalAlignment="Top" Width="456" Margin="9,69,0,0">
 			<ListView.View>
 				<GridView>
 					<GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding Name}"/>
@@ -15,14 +15,13 @@
 				</GridView>
 			</ListView.View>
 		</ListView>
-		<Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="10,10,0,0" Height="33"/>
-		<Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="111,10,0,0" Height="33"/>
+		<Button Name ="btnAdd" Click="BtnAdd_OnClick" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="9,10,0,0" Height="25"/>
+		<Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="110,10,0,0" Height="25"/>
 
-		<Buttons:RedButton x:Name ="RedButton" Text="Close" HorizontalAlignment="Left" Margin="366,349,0,0" VerticalAlignment="Top"/>
+		<Controls:LinkLabel Text="Advanced search" HorizontalAlignment="Left" Margin="375,18,0,0" VerticalAlignment="Top" Width="90"/>
 
-		<Controls:LinkLabel Text="Advanced search" HorizontalAlignment="Left" Margin="376,10,0,0" VerticalAlignment="Top" Width="90"/>
-
-		<CustomSearchTextBox:CustomSearchTextBox Name="SearchTextBox" KeyDown="UIElement_OnKeyDown" BorderThickness="1" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Width="456" Height="24"/>
+		<CustomSearchTextBox:CustomSearchTextBox Name="SearchTextBox" KeyDown="UIElement_OnKeyDown" BorderThickness="1" HorizontalAlignment="Left" Margin="9,40,0,0" VerticalAlignment="Top" Width="456" Height="24"/>
+		<Buttons:CustomSaveAndCloseButtons Name="ucSaveAndClose" IsSaveVisible="False" IsSaveAndCloseVisible="False" HorizontalAlignment="Left" Margin="388,339,0,0" VerticalAlignment="Top" Height="25" Width="77"/>
 
 	</Grid>
 </baseWindow:BaseWindow>

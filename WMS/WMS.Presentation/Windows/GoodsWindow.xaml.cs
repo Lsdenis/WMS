@@ -26,10 +26,9 @@ namespace WMS.Presentation.Windows
 		public GoodsWindow()
 		{
 			InitializeComponent();
-			RedButton.Click = (sender, args) => Close();
+			ucSaveAndClose.CloseButtonClick = (sender, args) => Close();
 			GetAllGoods();
 		}
-
 		private void GetAllGoods()
 		{
 			using (var uow = new UnitOfWork())
@@ -42,12 +41,10 @@ namespace WMS.Presentation.Windows
 				}
 			}
 		}
-
 		private void AddGoodToListView(LVGoodItem good)
 		{
 			lvGoods.Items.Add(good);
 		}
-
 		private void UIElement_OnKeyDown(object sender, KeyEventArgs e)
 		{
 			if (e.Key == Key.Return)
@@ -63,6 +60,12 @@ namespace WMS.Presentation.Windows
 					}
 				}
 			}
+		}
+
+		private void BtnAdd_OnClick(object sender, RoutedEventArgs e)
+		{
+			var window = new GoodWindow(null);
+			window.Show();
 		}
 	}
 }

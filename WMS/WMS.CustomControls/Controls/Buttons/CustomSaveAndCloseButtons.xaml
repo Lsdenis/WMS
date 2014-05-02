@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="WMS.CustomControls.Controls.Buttons.CustomSaveAndCloseButtons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="20" Width="246">
+	<Grid>
+		<Button Name="btnSave" Content="Save" Margin="0,0,171,0" HorizontalAlignment="Right" Width="75"/>
+		<Button Name ="btnSaveAndClose" Content="Save &amp; Close" Margin="0,0,81,0" HorizontalAlignment="Right" Width="85"/>
+		<Button Name ="btnClose" Content="Close" HorizontalAlignment="Right" Width="76"/>
+
+	</Grid>
+</UserControl>

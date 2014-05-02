@@ -14,6 +14,7 @@ namespace WMS.BusinessLogic.UnitOfwork
 
 		private IUserRepository _userRepository;
 		private IGoodsRepository _goodsRepository;
+		private IConsignmentRepository _consignmentRepository;
 		#endregion
 
 		#region Properties
@@ -30,18 +31,21 @@ namespace WMS.BusinessLogic.UnitOfwork
 			}
 		}
 
+		public IConsignmentRepository Consignments
+		{
+			get { return _consignmentRepository ?? (_consignmentRepository = new ConsignmentRepository(_context)); }
+		}
+
 		#endregion
 
 		public UnitOfWork()
 		{
 			_context = new WarehouseEntities();
 		}
-
 		public void Commit()
 		{
 			_context.SaveChanges();
 		}
-
 		protected virtual void Dispose(bool disposing)
 		{
 			if (!_disposed)
@@ -53,7 +57,6 @@ namespace WMS.BusinessLogic.UnitOfwork
 			}
 			_disposed = true;
 		}
-
 		public void Dispose()
 		{
 			Dispose(true);

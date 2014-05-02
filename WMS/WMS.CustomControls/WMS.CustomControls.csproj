@@ -56,6 +56,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\Buttons\CustomSaveAndCloseButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Buttons\RedButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -87,6 +91,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\BaseWindow\BaseWindow.cs" />
+    <Compile Include="Controls\Buttons\CustomSaveAndCloseButtons.xaml.cs">
+      <DependentUpon>CustomSaveAndCloseButtons.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Buttons\RedButton.xaml.cs">
       <DependentUpon>RedButton.xaml</DependentUpon>
     </Compile>

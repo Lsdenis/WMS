@@ -1,19 +1,22 @@
-﻿<baseWindow:BaseWindow x:Class="WMS.Presentation.Windows.GoodWindow"
+﻿<baseWindow:BaseWindow
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:baseWindow="clr-namespace:WMS.CustomControls.Controls.BaseWindow;assembly=WMS.CustomControls"
-        Title="GoodWindow" Height="155" Width="341"
+        xmlns:Buttons="clr-namespace:WMS.CustomControls.Controls.Buttons;assembly=WMS.CustomControls" x:Class="WMS.Presentation.Windows.GoodWindow"
+        Title="GoodWindow" Height="199" Width="341"
 		Loaded="GoodWindow_OnLoaded">
 	<Grid>
-		<TextBox HorizontalAlignment="Left" Height="23" Margin="122,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+		<TextBox Name ="txtName" HorizontalAlignment="Left" Height="23" Margin="122,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 		<Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-		<ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="122,66,0,0"/>
+		<ComboBox Name="cbConsignment" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="122,66,0,0"/>
 		<Label Content="Count" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,38,0,0"/>
 		<Label Content="Consignment" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1,1.077" Margin="10,66,0,0"/>
 		<Label Content="Adding date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,93,0,0"/>
-		<TextBox HorizontalAlignment="Left" Height="23" Margin="122,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+		<TextBox Name="txtCount" HorizontalAlignment="Left" Height="23" Margin="122,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 		<Label Content="24/01/1995" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="122,93,0,0"/>
-		<Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="247,66,0,0" Height="22"/>
+		<Button Name="btnAddConsignment" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="247,66,0,0" Height="22"/>
+
+		<Buttons:CustomSaveAndCloseButtons Name="ucSaveAndClose" IsSaveVisible="False" HorizontalAlignment="Left" Margin="155,133,0,0" VerticalAlignment="Top" Height="25" Width="168"/>
 
 	</Grid>
 </baseWindow:BaseWindow>

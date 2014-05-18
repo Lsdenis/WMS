@@ -3,14 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:baseWindow="clr-namespace:WMS.CustomControls.Controls.BaseWindow;assembly=WMS.CustomControls"
         xmlns:CustomToolBarItem="clr-namespace:WMS.CustomControls.Controls.CustomToolBarItem;assembly=WMS.CustomControls" x:Class="WMS.Presentation.Windows.MainMenuWindow"
-        Title="MainMenuWindow" Height="483" Width="864" Closed="MainMenuWindow_OnClosed">
-	<Grid>
-		<ToolBar ToolBarTray.IsLocked ="True" OverflowMode="Never" VerticalAlignment="Top" Height="119" HeaderStringFormat="">
-			<CustomToolBarItem:CustomToolBarItem Text="Goods" Name="btnGoods" ButtonImage="/WMS.Presentation;component/Images/Good.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
-			<CustomToolBarItem:CustomToolBarItem Text="Cells" Name="btnCells" ButtonImage="/WMS.Presentation;component/Images/Shelf.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
-			<CustomToolBarItem:CustomToolBarItem Text="Basket" Name="btnBasket" ButtonImage="/WMS.Presentation;component/Images/Cart.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
-			<CustomToolBarItem:CustomToolBarItem Text="User Management" ButtonImage="/WMS.Presentation;component/Images/UM.png" Name ="btnUserManagement" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
-			<CustomToolBarItem:CustomToolBarItem Text="User" Name="btnUser" ButtonImage="/WMS.Presentation;component/Images/User.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
-		</ToolBar>
-	</Grid>
+        Title="MainMenuWindow" Height="160" Width="864" Closed="MainMenuWindow_OnClosed" Left="0" Top="0">
+    <Grid>
+        <ToolBar ToolBarTray.IsLocked ="True" OverflowMode="Never" VerticalAlignment="Top" Height="119" HeaderStringFormat="">
+            <CustomToolBarItem:CustomToolBarItem Text="Goods" Name="btnGoods" ButtonImage="/WMS.Presentation;component/Images/Good.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
+            <CustomToolBarItem:CustomToolBarItem Text="Cells" Name="btnCells" ButtonImage="/WMS.Presentation;component/Images/Shelf.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
+            <CustomToolBarItem:CustomToolBarItem Text="Basket" Name="btnBasket" ButtonImage="/WMS.Presentation;component/Images/Cart.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
+            <CustomToolBarItem:CustomToolBarItem Text="Warehouses" Name="btnWarehouses" ButtonImage="/WMS.Presentation;component/Images/warehouse.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
+            <CustomToolBarItem:CustomToolBarItem Text="User Management" ButtonImage="/WMS.Presentation;component/Images/UM.png" Name ="btnUserManagement" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Width="80"/>
+            <CustomToolBarItem:CustomToolBarItem Text="User" Name="btnUser" ButtonImage="/WMS.Presentation;component/Images/User.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,-1" Width="80"/>
+        </ToolBar>
+    </Grid>
 </baseWindow:BaseWindow>

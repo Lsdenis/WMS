@@ -15,6 +15,9 @@ namespace WMS.BusinessLogic.UnitOfwork
 		private IUserRepository _userRepository;
 		private IGoodsRepository _goodsRepository;
 		private IConsignmentRepository _consignmentRepository;
+		private IGoodsInCellsRepository _goodsInCellsRepository;
+		private ICellsRepository _cellRepository;
+		private IWarehouseRepository _warehouseRepository;
 		#endregion
 
 		#region Properties
@@ -22,7 +25,6 @@ namespace WMS.BusinessLogic.UnitOfwork
 		{
 			get { return _userRepository ?? (_userRepository = new UserRepository(_context)); }
 		}
-
 		public IGoodsRepository Goods
 		{
 			get
@@ -30,12 +32,22 @@ namespace WMS.BusinessLogic.UnitOfwork
 				return _goodsRepository ?? (_goodsRepository = new GoodsRepository(_context));
 			}
 		}
-
 		public IConsignmentRepository Consignments
 		{
 			get { return _consignmentRepository ?? (_consignmentRepository = new ConsignmentRepository(_context)); }
 		}
-
+		public IGoodsInCellsRepository GoodsInCells
+		{
+			get { return _goodsInCellsRepository ?? (_goodsInCellsRepository = new GoodsInCellsRepository(_context)); }
+		}
+		public ICellsRepository Cells
+		{
+			get { return _cellRepository ?? (_cellRepository = new CellRepository(_context)); }
+		}
+		public IWarehouseRepository Warehouses
+		{
+			get { return _warehouseRepository ?? (new WarehouseRepository(_context)); }
+		}
 		#endregion
 
 		public UnitOfWork()

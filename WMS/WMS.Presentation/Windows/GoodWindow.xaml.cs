@@ -16,6 +16,7 @@ namespace WMS.Presentation.Windows
 		public GoodWindow(Good good)
 		{
 			InitializeComponent();
+			WindowStartupLocation = WindowStartupLocation.CenterOwner;
 			_good = good;
 			ucSaveAndClose.SaveAndCloseButtonClick = SaveAndCloseButtonClick;
 			ucSaveAndClose.CloseButtonClick = CloseButtonClick;
@@ -35,10 +36,19 @@ namespace WMS.Presentation.Windows
 
 			using (var uow = new UnitOfWork())
 			{
-				uow.Goods.AddGood(_good);
+				if (_good.Id == 0)
+				{
+					uow.Goods.AddGood(_good);
+				}
+				else
+				{
+					uow.Goods.UpdateGood(_good);
+				}
 
 				uow.Commit();
 			}
+
+			Close();
 		}
 		private void GetGoodValues()
 		{
@@ -81,6 +91,8 @@ namespace WMS.Presentation.Windows
 				_good = new Good();
 
 				SetConsignmentValues();
+
+				lblAddingDate.Content = DateTime.Now.Date.ToShortDateString();
 			}
 		}
 		private void SetConsignmentValues()
@@ -92,6 +104,11 @@ namespace WMS.Presentation.Windows
 				foreach (var consignment in consignments)
 				{
 					cbConsignment.Items.Add(consignment);
+
+				}
+				if (cbConsignment.Items.Count > 0)
+				{
+					cbConsignment.SelectedIndex = 0;
 				}
 			}
 		}

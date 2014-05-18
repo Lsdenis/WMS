@@ -51,7 +51,6 @@ namespace WMS.CustomControls.Controls.Buttons
 		{
 			set { btnClose.Click += value; }
 		}
-
 		public CustomSaveAndCloseButtons()
 		{
 			InitializeComponent();

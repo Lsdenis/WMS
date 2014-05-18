@@ -13,11 +13,11 @@ namespace WMS.Presentation.Windows
 		public MainMenuWindow(Window loginWindow)
 		{
 			InitializeComponent();
+			WindowStartupLocation = WindowStartupLocation.Manual;
 			_loginWindow = loginWindow;
 			btnUser.Text = CurrentUser.Login;
 			SetButtonClicks();
 		}
-
 		private void SetButtonClicks()
 		{
 			btnBasket.Click = BasketClick;
@@ -26,44 +26,34 @@ namespace WMS.Presentation.Windows
 			btnUser.Click = UserClick;
 			btnUserManagement.Click = UMClick;
 		}
-
 		private void UMClick(object sender, RoutedEventArgs routedEventArgs)
 		{
-			var window = new UserManagementWndow();
-			window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+			var window = new UserManagementWindow();
 			window.Show();
 		}
-
 		private void UserClick(object sender, RoutedEventArgs routedEventArgs)
 		{
 			_loginWindow.Show();
 			Close();
 		}
-
 		private void GoodClick(object sender, RoutedEventArgs routedEventArgs)
 		{
 			var window = new GoodsWindow();
-			window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
 			window.Show();	
 		}
-
 		private void CellClick(object sender, RoutedEventArgs routedEventArgs)
 		{
 			var window = new CellsWindow();
-			window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
 			window.Show();
 		}
-
 		private void BasketClick(object sender, RoutedEventArgs routedEventArgs)
 		{
 			var window = new BasketWindow();
-			window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
 			window.Show();
 		}
-
 		private void MainMenuWindow_OnClosed(object sender, EventArgs e)
 		{
-			_loginWindow.Close();
+//			_loginWindow.Close();
 		}
 	}
 }

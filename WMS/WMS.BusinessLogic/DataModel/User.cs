@@ -22,6 +22,7 @@ namespace WMS.BusinessLogic.DataModel
         public int Id { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public System.DateTime LastLoginedDate { get; set; }
     
         public virtual ICollection<LoginedUser> LoginedUsers { get; set; }
     }

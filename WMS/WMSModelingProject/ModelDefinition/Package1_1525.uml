@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3c74490a-0209-4c58-8821-47859dc481df"
+  name="BusinessLogic"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="401ba478-acd9-47a8-858b-085dcaa7d92b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DWMS.BusinessLogic"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d37fd434-3901-4caa-98d3-c31623a5d7f6"
+        LastKnownName="DataModel"
+        LastKnownLocation="Package2_1525.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="55974bc6-611e-4302-be54-c36c2249a107"
+        LastKnownName="Repository"
+        LastKnownLocation="Package6_1525.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ef835486-a67b-422e-ab27-828f675e7377"
+        LastKnownName="ListViewItems"
+        LastKnownLocation="Package9_1525.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="684f83dc-5efc-417f-9822-81cd943ce199"
+        LastKnownName="UnitOfwork"
+        LastKnownLocation="Package10_1525.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

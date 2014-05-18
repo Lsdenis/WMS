@@ -26,6 +26,7 @@ namespace WMS.Presentation.Windows
 		public GoodsWindow()
 		{
 			InitializeComponent();
+			WindowStartupLocation = WindowStartupLocation.CenterScreen;
 			ucSaveAndClose.CloseButtonClick = (sender, args) => Close();
 			GetAllGoods();
 		}
@@ -61,11 +62,45 @@ namespace WMS.Presentation.Windows
 				}
 			}
 		}
-
 		private void BtnAdd_OnClick(object sender, RoutedEventArgs e)
 		{
 			var window = new GoodWindow(null);
-			window.Show();
+			window.Owner = this;
+			window.ShowDialog();
+			lvGoods.Items.Clear();
+			using (var uow = new UnitOfWork())
+			{
+				var goods = uow.Goods.GetLVGoods();
+				foreach (var good in goods)
+				{
+					AddGoodToListView(good);
+				}
+			}
+		}
+		private void BtnDelete_OnClick(object sender, RoutedEventArgs e)
+		{
+			var lvGoodItem = lvGoods.SelectedItem as LVGoodItem;
+			if (lvGoodItem == null)
+			{
+				return;
+			}
+
+			var result = MessageBox.Show("Are you sure?", "Warning!", MessageBoxButton.OKCancel);
+			if (result == MessageBoxResult.Cancel)
+			{
+				return;
+			}
+
+			using (var uow = new UnitOfWork())
+			{
+				var good = uow.Goods.GetAllGoods().SingleOrDefault(gd => gd.Id == lvGoodItem.Id);
+				uow.GoodsInCells.DeleteGoodInCells(good);
+				uow.Goods.DeleteGood(good);
+
+				uow.Commit();
+			}
+
+			lvGoods.Items.Remove(lvGoodItem);
 		}
 	}
 }

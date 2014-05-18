@@ -16,7 +16,7 @@
 			</ListView.View>
 		</ListView>
 		<Button Name ="btnAdd" Click="BtnAdd_OnClick" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="9,10,0,0" Height="25"/>
-		<Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="110,10,0,0" Height="25"/>
+		<Button Name="btnDelete" Click="BtnDelete_OnClick" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="110,10,0,0" Height="25"/>
 
 		<Controls:LinkLabel Text="Advanced search" HorizontalAlignment="Left" Margin="375,18,0,0" VerticalAlignment="Top" Width="90"/>
 

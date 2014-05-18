@@ -1,0 +1,1535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="0c2d3d6c-27be-45f3-8579-c39590501575"
+  name="Interfaces"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="f59545f6-e43c-4905-8d7c-f314bda7b7a0"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DWMS.BusinessLogic.Repository.Interfaces"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="215d95e1-c098-4b02-bd1e-5c1116b299ad"
+        name="IConsignmentRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="64bc23a4-517f-4576-8cad-f64a12959f3d"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIConsignmentRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e1963a9d-b057-41a1-964d-1ebe240d1cec"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1e81f760-1a4b-42eb-acc4-21d30b11fe3f">
+                <propertyInstance
+                  Id="f21e9b6c-9045-4bee-9a8d-0daa80fbff72"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cf5714e8-2013-4456-ac5b-157908b012a0">
+                <propertyInstance
+                  Id="7ae5c23b-7411-4e2c-b024-032fb976afcc"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ad193323-68a3-4f10-870b-ebe0c242c303">
+                <propertyInstance
+                  Id="f52e3024-3d5c-4aba-aa08-54e8bd9ee266"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2462faa7-7622-4058-b623-7d6315db176c">
+                <propertyInstance
+                  Id="9ff7ed93-9008-4eb6-8803-f6766a82bfd0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="5f80234a-e50b-41e9-a787-12a1dc384ec6"
+            name="GetListOfConsignments"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="39d88919-7c86-445b-b558-f591fa33b728"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIConsignmentRepository Member%3DGetListOfConsignments"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="666d06bb-fd21-47c5-a873-1cf3405022af"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e3db778-4397-444d-b82e-74fd377f123d">
+                    <propertyInstance
+                      Id="27eed290-15c5-4323-9199-ced8041d357a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9eaaa345-d07d-43f0-b699-bc4cadb9840e">
+                    <propertyInstance
+                      Id="313b7870-20fe-448e-a041-86e9e16c9cf2"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d70e17c5-6dd9-495c-97dd-07d092d84f25">
+                    <propertyInstance
+                      Id="a6690aa8-fdde-4084-a5d2-86c4129e0a16"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9973f471-0b54-46b6-9660-6db81fce3cf7">
+                    <propertyInstance
+                      Id="6fc71b7a-b775-4391-9ab2-b32098b1ac63"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff36f813-ddea-40ab-8788-9de29c8d25f5">
+                    <propertyInstance
+                      Id="d8c67ec0-59fe-4c20-b1b8-9f33523336a4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2766cf2-db0e-43bb-a0c0-40c288069f04">
+                    <propertyInstance
+                      Id="50f77318-0358-4230-8dba-fffa4ac1a480"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f1f453e7-baa4-4030-a787-f840db188e93"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="15a8e453-3355-46b2-950d-3835617197f5"
+                      LastKnownName="List&lt;Consignment‎&gt;"
+                      LastKnownLocation="Package5_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d4707648-2da2-40dd-98a3-91b9969bcfe7"
+        name="IGoodsInCellsRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="4e8b06c1-738d-428e-a663-c8e6bac0c95b"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9288f56e-ff71-4aab-b3a4-adbd8ad20e39"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7f730d2a-d5f2-4124-80d5-db418b63c72e">
+                <propertyInstance
+                  Id="1f4769ef-5ccc-4a45-9bce-d2dfe57d22ad"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="35c4f2f9-0e6f-40bc-aade-eacc0c6f1829">
+                <propertyInstance
+                  Id="18c47a85-6dbf-4659-8f1d-1e1ab34d5655"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5ad6dd06-7814-4fe8-b034-b063fad450aa">
+                <propertyInstance
+                  Id="04ec006e-18f5-4706-9c31-f35a0c9495e4"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eb644f53-9ca4-4ac9-b543-edcca52e2feb">
+                <propertyInstance
+                  Id="fb8fa016-f769-471e-8389-e24ace38fd50"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="140f9beb-b757-47fa-bc3a-40e5ae695872"
+            name="AddGoodInCell"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ce240453-965a-4af5-9955-0db930d30f00"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3D(Name%3DAddGoodInCell OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DCell)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="006e035a-084a-497b-8687-3739e0d186c3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32e7b508-ca84-4a9b-9412-3cb82a4c428d">
+                    <propertyInstance
+                      Id="f33af135-cae4-4806-8e34-6e9ef44a7070"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a63f87e2-f8d7-4445-8734-28cfb52b2309">
+                    <propertyInstance
+                      Id="d29d0381-5fcb-4d56-b8c6-3c3ef9a175eb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eaae2ec7-57d2-4c11-b2c0-d9cafb8729ff">
+                    <propertyInstance
+                      Id="a49b6024-f719-45ef-8bf1-605bee8c755b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c589685b-38d6-48c4-ae4d-d00f2285b52b">
+                    <propertyInstance
+                      Id="0321285a-10e7-43c0-bc7b-82933e483788"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2fb886c-2947-4784-8e44-87d6c128080f">
+                    <propertyInstance
+                      Id="28823dc3-1868-4090-9a5e-e26d67b671a7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d701b1b-6a7f-42ad-95a4-4bf3cd3f7d16">
+                    <propertyInstance
+                      Id="cb81a89a-3e6e-4385-95f8-30c9946940e9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c0c69884-db81-41ea-95e1-f1250bb30831"
+                  name="good"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9f56b5f0-4c60-4364-a4c8-dc9d85b8c15c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3D(Name%3DAddGoodInCell OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DCell)]) ParameterIdentifier%3Dgood"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1d051f7-56e5-4c55-889c-07fd59948ddd"
+                      LastKnownName="Good"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a5e60987-6891-4b2c-bb8a-d880c4e05bc3"
+                  name="cell"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a20356f0-f2bf-401c-aceb-4c5dbb4adf8b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3D(Name%3DAddGoodInCell OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DCell)]) ParameterIdentifier%3Dcell"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="24bd9ff5-9758-4e8f-8550-dc4aff41dc74"
+                      LastKnownName="Cell"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1e645f8c-200d-45e2-be4a-9d5ea2d9e7a1"
+            name="DeleteGoodInCell"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="88f47c41-a487-4ace-8981-70417d6c19b1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3D(Name%3DDeleteGoodInCell OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DCell)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="de0a206b-0e60-431e-8540-dd4d80ae9768"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db61bdd2-acf2-41d7-a3b1-016908e83b95">
+                    <propertyInstance
+                      Id="7bd8d4fe-aea8-4e95-9134-9236240d6568"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80def4bf-9eb6-48e1-bc59-ce37a8f03303">
+                    <propertyInstance
+                      Id="05c2fba3-dbd2-4e3b-bf8b-51bc8d2d34d4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="edb1ef7c-b550-4f8a-9278-ba1b5b8db55d">
+                    <propertyInstance
+                      Id="f49e125b-8bb7-4c4f-92e5-c0b95a29bdfb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04de51e4-30aa-4337-b73c-c8fee78dc5f7">
+                    <propertyInstance
+                      Id="3c2efdb3-9486-45d8-99d5-e4ba34b670dd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1be604dd-647c-451b-aa55-bd9a3b7c6236">
+                    <propertyInstance
+                      Id="ca79dde0-4a17-4cf6-b0ad-f7c496c0fbbf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82234dac-f2d2-46a4-9f36-1ff375d90473">
+                    <propertyInstance
+                      Id="60502444-b852-479c-b50b-3943f99ff7d1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="afb27758-f057-4ecf-bb4e-e9b644da9d73"
+                  name="good"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="acc8d52a-2672-49f1-9e30-8dc8f4931eb1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3D(Name%3DDeleteGoodInCell OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DCell)]) ParameterIdentifier%3Dgood"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1d051f7-56e5-4c55-889c-07fd59948ddd"
+                      LastKnownName="Good"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="921a5cd6-5271-4424-a5c8-eb7e20d46bd3"
+                  name="cell"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b976dd85-8175-437d-8378-6410f70278fa"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3D(Name%3DDeleteGoodInCell OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DCell)]) ParameterIdentifier%3Dcell"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="24bd9ff5-9758-4e8f-8550-dc4aff41dc74"
+                      LastKnownName="Cell"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="63553da6-40d8-4f09-9bbc-117765aaf1a3"
+            name="DeleteGoodInCells"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="08185da0-d2da-4796-aa71-0b0b57994464"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3D(Name%3DDeleteGoodInCells OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4185aad5-6bb9-4d84-b457-e9c9b6d0991a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8bcf5216-161c-49ac-94f5-bb5642388648">
+                    <propertyInstance
+                      Id="f4b00b4c-1eeb-48a6-b50f-89f2a189ad47"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="980f84bb-4bf3-402d-89b8-385519234a69">
+                    <propertyInstance
+                      Id="b8353e30-f987-4c80-ac18-37261222eccb"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94c622db-0977-4e7b-bb37-98a700d675fe">
+                    <propertyInstance
+                      Id="e0ce3db3-0657-4922-99c7-39dbcbaaac2d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7da0e48-3895-4e17-ba20-87e06ac9e852">
+                    <propertyInstance
+                      Id="677c60cd-82a7-4c6d-9301-fbcd3e54a119"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9ba2440-4d2a-4321-847e-c5ec7bede60e">
+                    <propertyInstance
+                      Id="d6b402a2-2768-453d-addf-431118396a47"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cae338d1-1e1b-4246-acfa-57106a002940">
+                    <propertyInstance
+                      Id="58dd18c1-6d7e-4f81-8521-73225edd1a36"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7777c73a-673c-4a29-b117-22252be2b6fe"
+                  name="good"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b22aefb3-b04e-425c-bd79-f919be72c756"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3D(Name%3DDeleteGoodInCells OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)]) ParameterIdentifier%3Dgood"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1d051f7-56e5-4c55-889c-07fd59948ddd"
+                      LastKnownName="Good"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8a39fc45-4c01-4dd5-b862-af3fd88e60a0"
+            name="UpdateGoodInCell"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8a0ebf5a-8633-4b3c-b05f-168e978ef20d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3D(Name%3DUpdateGoodInCell OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DCell)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2b38081b-576c-4f54-bd0b-e5ce50d1ff3c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2943ac5-bb29-41f0-8281-aeb1da04935d">
+                    <propertyInstance
+                      Id="ed5d3b20-5213-417a-bb91-0ef0dad46a2e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27e54d6a-9f45-4c27-af4b-2f0a9f3fac25">
+                    <propertyInstance
+                      Id="50845062-6ccc-443d-a15f-53a747c85ccc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80cae56d-d6d2-496f-ae53-047a4e7b98a2">
+                    <propertyInstance
+                      Id="51bef96e-1b3c-44e9-9f25-1a53f28251ae"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d4ab4af-4e65-4820-81e4-26af3095092d">
+                    <propertyInstance
+                      Id="153248e7-4467-4a91-bce2-aea8e81ef6fc"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe5cf415-a787-43b8-a8c1-ed690a5f047e">
+                    <propertyInstance
+                      Id="77e659d7-8ebe-4a73-9fb1-a7fdf019def3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61c1ed33-0afe-4fde-aad3-544374ed1554">
+                    <propertyInstance
+                      Id="bacc4b17-ff9e-4852-baf7-f520ba621e0b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a68472d9-4757-4e1b-a4a0-a03e48d3f6fa"
+                  name="good"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7d5a0ceb-d4e7-4e54-8c9a-f89a26e72f25"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3D(Name%3DUpdateGoodInCell OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DCell)]) ParameterIdentifier%3Dgood"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1d051f7-56e5-4c55-889c-07fd59948ddd"
+                      LastKnownName="Good"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="950469ea-c5f1-4543-a882-93053aa48e25"
+                  name="cell"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="dddfbdb6-01d0-4fd6-90f8-0c7f9d4dca66"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3D(Name%3DUpdateGoodInCell OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DCell)]) ParameterIdentifier%3Dcell"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="24bd9ff5-9758-4e8f-8550-dc4aff41dc74"
+                      LastKnownName="Cell"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="80fc6643-bc92-4c11-bfcd-33a9455a997e"
+            name="GetListOfGoodsInCells"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="83ed97a2-1bad-4313-886f-791280e5b8c9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsInCellsRepository Member%3DGetListOfGoodsInCells"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="004ae3b6-0c3e-4139-bfed-47cb5839e4df"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6b5334d-8528-4b3b-91d7-5589ac63a4df">
+                    <propertyInstance
+                      Id="3e2ea66e-3064-48a0-b5e0-7c91ada5209b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="659ce236-d43a-445c-94b8-1b92b878cf54">
+                    <propertyInstance
+                      Id="82a21444-ee77-49f5-a910-a38778c885fc"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="60e06b51-809c-4e62-9bf6-0480ffcefa11">
+                    <propertyInstance
+                      Id="2ea26760-332f-41bb-8079-fd9c173d5674"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba958c98-693a-43c2-bbbf-765917b1032b">
+                    <propertyInstance
+                      Id="e67cca4d-057c-44dd-a7dc-e1e3fef2b591"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45acf790-06a7-4e97-b6fb-431fcf5b1f7b">
+                    <propertyInstance
+                      Id="7fbe6bf0-fe04-41fe-8aa8-1f24c9b43562"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1dbf40e4-9094-41d3-8f9f-a0c4bb5e3754">
+                    <propertyInstance
+                      Id="1b950c4d-a3d2-4bf5-b1fe-c943b0bc43a1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="128cb179-7fe1-40aa-a4c1-82da896ca827"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="659537fb-1eec-44e4-98b8-c5df3bf327dc"
+                      LastKnownName="List&lt;GoodsInCell‎&gt;"
+                      LastKnownLocation="Package5_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="515e46de-c4f9-4f7f-9050-b380f931adf5"
+        name="IGoodsRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="187937c7-dd04-4d7b-a7d8-3a7429807e8e"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="88d1fe30-638e-4f73-8d5c-0cfaffae444c"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="08a2f4aa-1b7e-4f87-a296-ef3e58343157">
+                <propertyInstance
+                  Id="5e83f3e7-ffcd-4653-9993-987be6b5ded8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="98fcc2b7-0aa9-4bad-9fde-d16944011bb9">
+                <propertyInstance
+                  Id="37f4d545-8e09-410e-84ff-2a8a4a8f709d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8fc4ba21-d82d-4f76-aee3-76afbab26b6f">
+                <propertyInstance
+                  Id="a2ae729f-fc68-4648-bd8a-85748a47ef9c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fd7904da-a84a-4e94-a417-726e81bc5384">
+                <propertyInstance
+                  Id="d89e4ba2-8830-4ba3-b8ff-f8f2b6085ffb"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="cd6dfb37-1b1e-4a7f-9307-c7085bf51f10"
+            name="AddGood"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="02df8f45-df98-4751-9792-1a0032d4f5b4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsRepository Member%3D(Name%3DAddGood OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="05365e9c-14fd-48c7-83d2-afb0d100d9d7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e114805f-cc47-424d-bc61-d287aa4946dd">
+                    <propertyInstance
+                      Id="b5440575-6fca-4f9c-b763-ff00ba387d91"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0171ded-33a6-49ed-9886-ca3223cb925a">
+                    <propertyInstance
+                      Id="4f5b4b44-61cf-4675-8b47-5d896aeae934"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b4b84f9-0bd8-4d4f-b709-24cddbac3d1d">
+                    <propertyInstance
+                      Id="c98f0740-2c7d-4b4c-b5ff-5fecea6b460c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ce803e8-ac3c-4aff-bb34-47c42584f458">
+                    <propertyInstance
+                      Id="8026443a-f44c-4d7a-99c7-351942f0cb80"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bd16df8-9951-4bf5-b663-4322cd273cdb">
+                    <propertyInstance
+                      Id="02d4727c-837b-403f-96ca-696806af2caf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7194cca-52f7-4e56-8789-b1cec5773b88">
+                    <propertyInstance
+                      Id="21c3f7fc-a032-4f10-8cfd-b2368fcbb1ee"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b5d0f48b-cdf2-41b2-8bfc-e5e063034bd8"
+                  name="good"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7708bae9-2033-45b6-bc72-c68a64ececc9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsRepository Member%3D(Name%3DAddGood OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)]) ParameterIdentifier%3Dgood"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1d051f7-56e5-4c55-889c-07fd59948ddd"
+                      LastKnownName="Good"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e80a377a-fe24-4a60-840b-be13e5fb5181"
+            name="DeleteGood"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a5c84f2e-9fda-4341-955f-24df4cc3f685"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsRepository Member%3D(Name%3DDeleteGood OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="488656c7-bc2c-4d73-93ce-ed7ce0867b87"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="198c8ff3-e0a9-4d99-b9f1-1979881b543d">
+                    <propertyInstance
+                      Id="96f860c7-4271-4808-8119-af5e2f319e8c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69198ba3-1208-40d3-a07f-25e5a26b70ff">
+                    <propertyInstance
+                      Id="55a3e460-fcf2-4f5d-8599-d67a7a83e910"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8ced5d3-b35a-4d17-a4fd-285abe5b87cc">
+                    <propertyInstance
+                      Id="97fe332a-acc2-4ad8-86ae-7d02cae5f120"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5111023-4d72-424c-a05e-0c4f8c1f6248">
+                    <propertyInstance
+                      Id="05b63da4-dab4-40e9-afac-6947d6205265"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d1b223d-84b1-4134-b7ad-6e308d3a07eb">
+                    <propertyInstance
+                      Id="d464e2bd-44b2-4269-86c0-b183c2752e06"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0fb2950f-51b7-47a2-91f4-804aef2dfb94">
+                    <propertyInstance
+                      Id="7a0099d3-34ac-4592-835c-19d92945c071"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c9591ea2-a116-4b7f-bdae-4272c94611ce"
+                  name="good"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="489eddf4-3e4c-4e3e-b345-7548e3a34a88"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsRepository Member%3D(Name%3DDeleteGood OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)]) ParameterIdentifier%3Dgood"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1d051f7-56e5-4c55-889c-07fd59948ddd"
+                      LastKnownName="Good"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ffa0de27-5220-4355-88ac-d35e4d1efe6e"
+            name="UpdateGood"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cf692d2e-e1fc-4766-ade6-1831a1f1daf5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsRepository Member%3D(Name%3DUpdateGood OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="24fc24f2-bac4-45bd-a527-88b1e8514c0f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d72ae7bc-5b55-4425-ad62-1e49b0807743">
+                    <propertyInstance
+                      Id="4f64f69a-09c0-448a-ac1e-f0cc5a27ee72"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9949e4b8-e53d-46ed-a50c-0275e458862a">
+                    <propertyInstance
+                      Id="2fd4883e-31df-427d-a0dd-25cd5c3b8ad4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2847957-8f97-45df-81a9-927cb6b73bae">
+                    <propertyInstance
+                      Id="9f31abeb-dd3a-49fc-b228-32637a4e36bb"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed7747d8-ff94-4ac7-a660-8a2c9ffc436b">
+                    <propertyInstance
+                      Id="c99e9449-0915-41cd-964f-e1f98c6c85ce"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="192ef927-74d8-4637-ad8c-5dfebbfcb289">
+                    <propertyInstance
+                      Id="126c6a9c-926c-4749-8db9-9eaf49187f49"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2681779a-9365-4585-8663-04b945aa65ed">
+                    <propertyInstance
+                      Id="0284d87c-655e-494f-9c9a-e726c48e29e3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="867c449b-0f45-449f-b07d-aef08e86dd2f"
+                  name="good"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="51cd3715-8a34-47cc-a05c-ade30f08b52c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsRepository Member%3D(Name%3DUpdateGood OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DGood)]) ParameterIdentifier%3Dgood"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="b1d051f7-56e5-4c55-889c-07fd59948ddd"
+                      LastKnownName="Good"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1d93d8f1-0c15-4a1c-b03d-4c76a80a8af5"
+            name="GetAllGoods"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4a215e94-7310-414a-8501-d5fcf1e74156"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsRepository Member%3DGetAllGoods"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="edaa6637-886c-47bb-af85-931fdfc7b6ba"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6afba119-22a3-4c95-b278-bdf1312a6274">
+                    <propertyInstance
+                      Id="bc5b613c-229e-4db7-9964-297fa244917c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7dd54aca-8b71-4e0a-b4c8-8ee0039cdec5">
+                    <propertyInstance
+                      Id="b86d6677-a5d9-4607-a1bc-12a4ed1f3df3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="683f6142-9ee3-4d78-a024-49e63d9f3876">
+                    <propertyInstance
+                      Id="3bfedc02-1d31-4d57-a9d6-6a2a5a89bcb6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a11307c8-0e62-48c7-8bcd-4859f5704ee0">
+                    <propertyInstance
+                      Id="cedf02ff-7f51-4a78-856c-266607ac139e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8646db6e-40c3-4e4b-b484-7ac00f7fcaab">
+                    <propertyInstance
+                      Id="77e6c835-00d2-481c-98fd-0ce018c2dcaa"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ee713312-bad4-4abe-a719-1e05c40abe03">
+                    <propertyInstance
+                      Id="b41eef85-9675-4671-af00-e7dc174a89ae"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0db964dd-6563-4ba0-9e1d-0bc80e3eeeea"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="36b53de1-ad81-452d-9e2a-e40c751522ca"
+                      LastKnownName="List&lt;Good‎&gt;"
+                      LastKnownLocation="Package5_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="97cd7512-5fc0-41f7-90e2-ba1582cb3c79"
+            name="GetLVGoods"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3729b1c9-58ef-4bb7-8aec-f941a366d273"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIGoodsRepository Member%3DGetLVGoods"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="137092a7-1043-4f72-a748-dfd1771e3abb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4326864f-3ca2-426f-ad08-8d95dfeaf014">
+                    <propertyInstance
+                      Id="d642a3c4-91b7-4282-81bd-84ed6285e384"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed1d3fd5-06b5-4e1a-8dc7-80c6d91799f7">
+                    <propertyInstance
+                      Id="11ac7460-703c-443a-be39-d78459e4d613"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="251d9793-bdcb-4878-8ceb-0b836d9ea90e">
+                    <propertyInstance
+                      Id="90e420c3-79bf-4f51-a36c-c8a448ce6f33"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3b687ae-197e-4d3c-ad66-3c100cf4f407">
+                    <propertyInstance
+                      Id="19728f42-0d4f-445d-a126-112694044322"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3895944-9773-4dac-8aef-56adfe42ec81">
+                    <propertyInstance
+                      Id="549ca50b-6956-4654-9e14-37ad839064ab"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c64c982b-2105-418a-a7b0-6979d8e03e7d">
+                    <propertyInstance
+                      Id="8076ca94-8527-4697-a0f8-feb3d0117084"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aaed0e59-562a-425f-bdac-db58ae4bcaa5"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="907109c8-c357-4ade-a952-f10109082e85"
+                      LastKnownName="List&lt;LVGoodItem‎&gt;"
+                      LastKnownLocation="Package5_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="2bb2a539-4c09-4f7b-8de1-c9b630233622"
+        name="IUserRepository"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="0ef8c6f1-475d-4ea4-b22f-56a56397ad12"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIUserRepository"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="56d879c6-b284-4482-b252-ba6e107e2296"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="49701486-753f-482e-bf3c-39c5cfb9567d">
+                <propertyInstance
+                  Id="9be0b058-b574-46c8-b696-0192cf2cca28"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4633b627-382c-418b-bdba-ed806eca0df4">
+                <propertyInstance
+                  Id="03c31c9d-cc3a-4e43-8695-7875523f5a6f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a9a96543-7799-430c-90a4-56b60ecce54c">
+                <propertyInstance
+                  Id="9d953bb5-76a6-400c-8069-778a96e3a73a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7bc1fb2d-405f-4565-9869-86668ce6d198">
+                <propertyInstance
+                  Id="2b2c1c35-c792-431b-bd38-353fca2ce2af"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="bc32d0c2-b786-46a5-9557-3b764ec40fa5"
+            name="AddUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8928b699-e305-46bd-9852-51d693116f49"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIUserRepository Member%3D(Name%3DAddUser OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DUser)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2bc61f81-6933-4e1b-a1d6-2962887ee761"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3c44bbc-6b5b-436d-9e8c-4cd71f3bcf11">
+                    <propertyInstance
+                      Id="f5778f5a-048d-4c80-a704-9a29a5c53978"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51032bb7-5d33-4d01-b84d-7f8f12403947">
+                    <propertyInstance
+                      Id="a69832b1-ef84-41a6-b7db-a1e4b17fbaf3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a969f5c8-3722-4676-aa3f-fcbefc754aa2">
+                    <propertyInstance
+                      Id="72bb7501-f9e9-42cc-b748-920d5c1b92cf"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e83ec1c8-026d-4efe-a6ab-ecdd0f56ad8a">
+                    <propertyInstance
+                      Id="2e211103-4f2e-49fe-8934-4c4e3dd00e25"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c0174a8-3774-48bc-8b23-4f04f4b2ac03">
+                    <propertyInstance
+                      Id="f1f5e033-9057-4850-85a2-e1a235ef9ff0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="129a1be8-2c4d-4645-8f3a-023a388d7841">
+                    <propertyInstance
+                      Id="4a5cd27a-e77d-4411-80de-6155b7160164"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="044ae7e8-4320-47cf-9e99-237b8ad014fa"
+                  name="user"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="55c3c254-a4ca-43a0-a984-6b3edcacca6b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIUserRepository Member%3D(Name%3DAddUser OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DUser)]) ParameterIdentifier%3Duser"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="228fd2f7-5109-4db0-ace1-347ba88aa201"
+                      LastKnownName="User"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fe699c9f-e97e-48b0-87e8-85c363ede3cf"
+            name="DeleteUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="639e5945-87ee-45dc-a843-f447fc0930b7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIUserRepository Member%3D(Name%3DDeleteUser OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DUser)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="faf51361-5a10-4596-abd4-2d4b3c1b660d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ddadd669-c098-4d7a-ab1a-f33a1b5d7b38">
+                    <propertyInstance
+                      Id="c9b4bddf-13a8-4168-a137-34b608ee51bb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86f70369-1ccf-48dd-b3f4-0551acbd22b2">
+                    <propertyInstance
+                      Id="495aa84b-3c6d-45e5-a61d-ae43125392cf"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="124f00e8-5d01-4cf0-85b7-269244ae4693">
+                    <propertyInstance
+                      Id="43550761-dc43-435a-94c7-b46dbd9539fc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8359947-fb8f-4c5b-bbbe-9ecb4a99d976">
+                    <propertyInstance
+                      Id="467c300e-30ca-4c9c-a9d9-292391eedac3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb913e5a-60a7-415e-824c-4ccf1f919e35">
+                    <propertyInstance
+                      Id="cfa85adf-ba5f-401f-8dcd-aa3ef90f3898"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1caa38a-b6af-49bf-81f1-dc76bf602828">
+                    <propertyInstance
+                      Id="af671762-00aa-4d15-abdb-f0d673d5669b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f0710b9e-7883-4baa-9d26-f11d57933dbe"
+                  name="user"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e594d641-d769-45a6-9755-ffa1e1f54d25"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIUserRepository Member%3D(Name%3DDeleteUser OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DUser)]) ParameterIdentifier%3Duser"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="228fd2f7-5109-4db0-ace1-347ba88aa201"
+                      LastKnownName="User"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="eeef54a6-6ca1-4560-8419-cc668c8b384c"
+            name="UpdateUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="25ff2725-364f-4039-8953-ace73341a555"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIUserRepository Member%3D(Name%3DUpdateUser OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DUser)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="760c2d84-2434-4ae4-bbd3-7ea94d7d4d21"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7cca885-0c35-4d45-8148-d821ed2b21d8">
+                    <propertyInstance
+                      Id="ea09649e-8c6a-4735-ad5c-af67a52e66bf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d079ab1-8702-43a4-b6a3-9a61faf710d7">
+                    <propertyInstance
+                      Id="3d4438a8-2cec-44bd-9091-f0025a9dd63e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c66dba37-4cd9-4be2-99c7-a47783ab245b">
+                    <propertyInstance
+                      Id="69dbfede-8e74-4b17-a2ba-3dcdb2249c0e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7e6aa77-d8d7-4a80-8ccb-d7da4bfcc2a5">
+                    <propertyInstance
+                      Id="d706e75c-1222-44ff-9177-f0a0c708f931"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80615972-778e-4b62-8878-e9f53712b367">
+                    <propertyInstance
+                      Id="3bf559e3-94c6-4ec9-aecb-e51a1d6ce13e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84c2f184-75c5-46ba-bf9f-054aeb217730">
+                    <propertyInstance
+                      Id="f49092ff-1400-40b1-87d5-a75f32a57140"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="057e4c54-0075-488c-b63f-055c06cf1b25"
+                  name="user"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a7f2d3f8-3fd0-4ca3-9a09-2b37cda57a8c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIUserRepository Member%3D(Name%3DUpdateUser OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.DataModel Type%3DUser)]) ParameterIdentifier%3Duser"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="228fd2f7-5109-4db0-ace1-347ba88aa201"
+                      LastKnownName="User"
+                      LastKnownLocation="Package2_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3b1b3041-d148-452f-888a-5480a2884252"
+            name="GetListOfUsers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7e1258f4-93f1-465b-a703-32a2c586513f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FDropbox%2FDropbox%2FDiploma%2FWMS%2FWMS%2FWMS.BusinessLogic%2Fbin%2FRelease%2FWMS.BusinessLogic.dll Namespace%3DWMS.BusinessLogic.Repository.Interfaces Type%3DIUserRepository Member%3DGetListOfUsers"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1a404feb-e740-4702-9d58-691ffb42abb4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84c3932f-4742-486c-996e-02e219fac232">
+                    <propertyInstance
+                      Id="67d4037c-3295-43ec-8782-011b9f71d830"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1564553a-0090-44b4-91f1-c8fbc8e23680">
+                    <propertyInstance
+                      Id="504effe0-e5e8-4207-9ff6-aea287fe3126"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a693c259-9a5c-4f89-b6a9-7932360e235e">
+                    <propertyInstance
+                      Id="d48ad88c-ca9d-4fa8-9a93-c9de84895520"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84dd0077-2f57-486c-9003-745e589a2e49">
+                    <propertyInstance
+                      Id="0e64f73a-39d1-4f9c-b235-bca6be3b9fcb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11f546b2-7dd4-475a-9f3b-adc0e735fea9">
+                    <propertyInstance
+                      Id="bed9b598-07bc-4d2f-8937-4df122417baa"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7612ac0a-643f-4578-9ec8-e7a4204e0c90">
+                    <propertyInstance
+                      Id="7e92f24f-90eb-49b8-9933-728773d2cc94"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fda6c1dc-35a2-4b1a-ba74-38db283a3ac3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0563234b-8656-4577-8f65-13053256284f"
+                      LastKnownName="List&lt;User‎&gt;"
+                      LastKnownLocation="Package5_1525.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

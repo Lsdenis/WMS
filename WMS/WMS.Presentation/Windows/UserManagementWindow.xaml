@@ -1,0 +1,30 @@
+﻿<baseWindow:BaseWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:baseWindow="clr-namespace:WMS.CustomControls.Controls.BaseWindow;assembly=WMS.CustomControls"
+        xmlns:Buttons="clr-namespace:WMS.CustomControls.Controls.Buttons;assembly=WMS.CustomControls" xmlns:CustomSearchTextBox="clr-namespace:WMS.CustomControls.Controls.CustomSearchTextBox;assembly=WMS.CustomControls" x:Class="WMS.Presentation.Windows.UserManagementWindow"
+        Title="UserManagementWindow" Height="342" Width="338">
+	<Window.Resources>
+		<Style TargetType="ListViewItem">
+			<Setter Property="HorizontalContentAlignment" Value="Center" />
+		</Style>
+	</Window.Resources>
+
+	<Grid>
+
+		<Buttons:CustomSaveAndCloseButtons Name="ucSaveAndClose" IsSaveAndCloseVisible="False" IsSaveVisible="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="240,274,0,0" Height="25" Width="76"/>
+		<ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" MouseDoubleClick="LvUsers_OnMouseDoubleClick" Name="lvUsers" HorizontalAlignment="Left" Height="196" VerticalAlignment="Top" Width="306" Margin="10,68,0,0">
+			<ListView.View>
+				<GridView>
+					<GridViewColumn  Header="Login" Width="150" DisplayMemberBinding="{Binding Login}"/>
+					<GridViewColumn Header="Last Login Date" Width="150" DisplayMemberBinding="{Binding LastLoginedDate, StringFormat='dd/MM/yyyy'}"/>
+				</GridView>
+			</ListView.View>
+		</ListView>
+		<Button Name="btnDelete" Click="BtnDelete_OnClick" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="90,13,0,0" Height="25"/>
+		<Button Name="btnAdd" Click="BtnAdd_OnClick" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,13,0,0" Height="25"/>
+
+		<CustomSearchTextBox:CustomSearchTextBox Name="SearchTextBox" KeyDown="UIElement_OnKeyDown" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="306" Height="20"/>
+
+	</Grid>
+</baseWindow:BaseWindow>

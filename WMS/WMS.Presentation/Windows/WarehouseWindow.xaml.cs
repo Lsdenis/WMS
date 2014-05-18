@@ -11,16 +11,15 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WMS.CustomControls.Controls.BaseWindow;
 
 namespace WMS.Presentation.Windows
 {
 	/// <summary>
-	/// Interaction logic for UserManagementWndow.xaml
+	/// Interaction logic for WarehouseWindow.xaml
 	/// </summary>
-	public partial class UserManagementWndow : BaseWindow
+	public partial class WarehouseWindow : Window
 	{
-		public UserManagementWndow()
+		public WarehouseWindow()
 		{
 			InitializeComponent();
 		}

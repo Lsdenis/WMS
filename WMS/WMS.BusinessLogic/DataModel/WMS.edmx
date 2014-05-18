@@ -63,6 +63,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Login" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LastLoginedDate" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="Warehouses">
           <Key>
@@ -284,6 +285,7 @@
           <Property Name="Login" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="LoginedUsers" Relationship="WarehouseModel.FK_LoginedUsers_Users" FromRole="Users" ToRole="LoginedUsers" />
+          <Property Name="LastLoginedDate" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         <EntityType Name="Warehouse">
           <Key>
@@ -430,6 +432,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="WarehouseModel.User">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="LastLoginedDate" ColumnName="LastLoginedDate" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
                 <ScalarProperty Name="Password" ColumnName="Password" />

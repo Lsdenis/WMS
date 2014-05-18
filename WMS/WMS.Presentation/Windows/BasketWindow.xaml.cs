@@ -22,6 +22,7 @@ namespace WMS.Presentation.Windows
 		public BasketWindow()
 		{
 			InitializeComponent();
+			WindowStartupLocation = WindowStartupLocation.CenterScreen;
 		}
 	}
 }

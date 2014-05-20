@@ -1,8 +1,15 @@
-﻿<Window x:Class="WMS.Presentation.Windows.WarehouseWindow"
+﻿<baseWindow:BaseWindow
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="WarehouseWindow" Height="300" Width="300">
+        xmlns:baseWindow="clr-namespace:WMS.CustomControls.Controls.BaseWindow;assembly=WMS.CustomControls"
+        xmlns:Buttons="clr-namespace:WMS.CustomControls.Controls.Buttons;assembly=WMS.CustomControls" x:Class="WMS.Presentation.Windows.WarehouseWindow"
+        Title="WarehouseWindow" Loaded="WarehouseWindow_OnLoaded" Height="136" Width="235">
     <Grid>
-        
+        <TextBox Name="txtName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="85,10,0,0"/>
+
+        <Buttons:CustomSaveAndCloseButtons Name="ucSaveAndClose" IsSaveVisible="False" IsSaveAndCloseVisible="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,71,0,0" Width="171"/>
+        <CheckBox Name="chkIsDefault" Content="Is Default" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,42,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Margin="10,11,0,0"/>
+
     </Grid>
-</Window>
+</baseWindow:BaseWindow>

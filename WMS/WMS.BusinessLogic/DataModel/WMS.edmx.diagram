@@ -19,6 +19,7 @@
         <AssociationConnector Association="WarehouseModel.FK_GoodsInCells_Goods" ManuallyRouted="false" />
         <AssociationConnector Association="WarehouseModel.FK_UserCart_Goods" ManuallyRouted="false" />
         <AssociationConnector Association="WarehouseModel.FK_LoginedUsers_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehouseModel.FK_UserCarts_Users" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

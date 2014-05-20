@@ -3,24 +3,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:baseWindow="clr-namespace:WMS.CustomControls.Controls.BaseWindow;assembly=WMS.CustomControls"
         xmlns:Buttons="clr-namespace:WMS.CustomControls.Controls.Buttons;assembly=WMS.CustomControls" xmlns:CustomSearchTextBox="clr-namespace:WMS.CustomControls.Controls.CustomSearchTextBox;assembly=WMS.CustomControls" x:Class="WMS.Presentation.Windows.CellsWindow"
-        Title="CellsWindow" Height="365" Width="445">
+        Title="CellsWindow" Height="409" Width="488">
     <Grid>
-        <ListView MouseDoubleClick="LvCells_OnMouseDoubleClick" x:Name="lvCells" HorizontalAlignment="Left" Height="230" VerticalAlignment="Top" Width="407" Margin="10,61,0,0">
+        <ListView MouseDoubleClick="LvCells_OnMouseDoubleClick" x:Name="lvCells" HorizontalAlignment="Left" Height="269" VerticalAlignment="Top" Width="447" Margin="10,61,0,0">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Number" Width="150" DisplayMemberBinding="{Binding Number}"/>
                     <GridViewColumn Header="Warehouse" Width="150" DisplayMemberBinding="{Binding Warehouse}"/>
-                    <GridViewColumn Header="Value" Width="50" DisplayMemberBinding="{Binding Value}"/>
-                    <GridViewColumn Header="Max" Width="50" DisplayMemberBinding="{Binding MaxValue}"/>
+                    <GridViewColumn Header="Value" Width="70" DisplayMemberBinding="{Binding Value}"/>
+                    <GridViewColumn Header="Max" Width="70" DisplayMemberBinding="{Binding MaxValue}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Button Content="Add" x:Name="btnAdd" Click="BtnAdd_OnClick" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Delete" x:Name="btnDelete" Click="BtnDelete_OnClick" HorizontalAlignment="Left" Margin="90,11,0,0" VerticalAlignment="Top" Width="75"/>
 
-        <Buttons:CustomSaveAndCloseButtons IsSaveAndCloseVisible="False" IsSaveVisible="False" x:Name="ucSaveAndClose" HorizontalAlignment="Left" Margin="340,296,0,0" VerticalAlignment="Top" Width="77"/>
+        <Buttons:CustomSaveAndCloseButtons IsSaveAndCloseVisible="False" IsSaveVisible="False" x:Name="ucSaveAndClose" HorizontalAlignment="Left" Margin="380,335,0,0" VerticalAlignment="Top" Width="77"/>
 
-        <CustomSearchTextBox:CustomSearchTextBox Name="SearchTextBox" KeyDown="UIElement_OnKeyDown" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="407" Height="20"/>
+        <CustomSearchTextBox:CustomSearchTextBox Name="SearchTextBox" KeyDown="UIElement_OnKeyDown" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="447" Height="20"/>
 
     </Grid>
 </baseWindow:BaseWindow>

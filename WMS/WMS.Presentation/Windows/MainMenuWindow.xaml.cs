@@ -25,6 +25,13 @@ namespace WMS.Presentation.Windows
 			btnGoods.Click = GoodClick;
 			btnUser.Click = UserClick;
 			btnUserManagement.Click = UMClick;
+			btnWarehouses.Click = WHSCLick;
+		}
+
+		private void WHSCLick(object sender, RoutedEventArgs e)
+		{
+			var window = new WarehousesWindow();
+			window.Show();
 		}
 		private void UMClick(object sender, RoutedEventArgs routedEventArgs)
 		{

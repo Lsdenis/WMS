@@ -21,6 +21,7 @@ namespace WMS.BusinessLogic.DataModel
     
         public int Id { get; set; }
         public string Name { get; set; }
+        public bool IsDefault { get; set; }
     
         public virtual ICollection<Cell> Cells { get; set; }
     }

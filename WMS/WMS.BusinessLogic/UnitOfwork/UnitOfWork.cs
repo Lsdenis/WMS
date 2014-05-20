@@ -46,7 +46,7 @@ namespace WMS.BusinessLogic.UnitOfwork
 		}
 		public IWarehouseRepository Warehouses
 		{
-			get { return _warehouseRepository ?? (new WarehouseRepository(_context)); }
+			get { return _warehouseRepository ?? (_warehouseRepository = new WarehouseRepository(_context)); }
 		}
 		#endregion
 

@@ -17,6 +17,7 @@ namespace WMS.BusinessLogic.DataModel
         public User()
         {
             this.LoginedUsers = new HashSet<LoginedUser>();
+            this.UserCarts = new HashSet<UserCart>();
         }
     
         public int Id { get; set; }
@@ -25,5 +26,6 @@ namespace WMS.BusinessLogic.DataModel
         public System.DateTime LastLoginedDate { get; set; }
     
         public virtual ICollection<LoginedUser> LoginedUsers { get; set; }
+        public virtual ICollection<UserCart> UserCarts { get; set; }
     }
 }

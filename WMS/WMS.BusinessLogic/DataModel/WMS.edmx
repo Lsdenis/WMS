@@ -4,12 +4,50 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="WarehouseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="WarehouseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="WarehouseModelStoreContainer">
+          <EntitySet Name="Cells" EntityType="WarehouseModel.Store.Cells" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Consignments" EntityType="WarehouseModel.Store.Consignments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Goods" EntityType="WarehouseModel.Store.Goods" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GoodsInCells" EntityType="WarehouseModel.Store.GoodsInCells" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LoginedUsers" EntityType="WarehouseModel.Store.LoginedUsers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserCarts" EntityType="WarehouseModel.Store.UserCarts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="WarehouseModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Warehouses" EntityType="WarehouseModel.Store.Warehouses" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Cells_Warehouses" Association="WarehouseModel.Store.FK_Cells_Warehouses">
+            <End Role="Warehouses" EntitySet="Warehouses" />
+            <End Role="Cells" EntitySet="Cells" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Goods_Consignments" Association="WarehouseModel.Store.FK_Goods_Consignments">
+            <End Role="Consignments" EntitySet="Consignments" />
+            <End Role="Goods" EntitySet="Goods" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GoodsInCells_Cells" Association="WarehouseModel.Store.FK_GoodsInCells_Cells">
+            <End Role="Cells" EntitySet="Cells" />
+            <End Role="GoodsInCells" EntitySet="GoodsInCells" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GoodsInCells_Goods" Association="WarehouseModel.Store.FK_GoodsInCells_Goods">
+            <End Role="Goods" EntitySet="Goods" />
+            <End Role="GoodsInCells" EntitySet="GoodsInCells" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LoginedUsers_Users" Association="WarehouseModel.Store.FK_LoginedUsers_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="LoginedUsers" EntitySet="LoginedUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCart_Goods" Association="WarehouseModel.Store.FK_UserCart_Goods">
+            <End Role="Goods" EntitySet="Goods" />
+            <End Role="UserCarts" EntitySet="UserCarts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCarts_Users" Association="WarehouseModel.Store.FK_UserCarts_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserCarts" EntitySet="UserCarts" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="Cells">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Number" Type="int" Nullable="false" />
           <Property Name="WarehouseId" Type="int" Nullable="false" />
           <Property Name="MaxValue" Type="int" Nullable="false" />
@@ -18,7 +56,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar(max)" />
           <Property Name="DeliveredDate" Type="date" Nullable="false" />
         </EntityType>
@@ -26,7 +64,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ConsignmentId" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Count" Type="int" Nullable="false" />
@@ -37,7 +75,7 @@
             <PropertyRef Name="GoodId" />
             <PropertyRef Name="CellId" />
           </Key>
-          <Property Name="GoodId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GoodId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="CellId" Type="int" Nullable="false" />
           <Property Name="Value" Type="int" Nullable="false" />
         </EntityType>
@@ -45,23 +83,24 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="UserId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="UserCarts">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="GoodId" Type="int" Nullable="false" />
           <Property Name="Count" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Login" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="nvarchar" Nullable="false" MaxLength="255" />
           <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
           <Property Name="LastLoginedDate" Type="date" Nullable="false" />
         </EntityType>
@@ -69,12 +108,13 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
         </EntityType>
         <Association Name="FK_Cells_Warehouses">
-          <End Role="Warehouses" Type="Self.Warehouses" Multiplicity="1" />
-          <End Role="Cells" Type="Self.Cells" Multiplicity="*" />
+          <End Role="Warehouses" Type="WarehouseModel.Store.Warehouses" Multiplicity="1" />
+          <End Role="Cells" Type="WarehouseModel.Store.Cells" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Warehouses">
               <PropertyRef Name="Id" />
@@ -85,8 +125,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Goods_Consignments">
-          <End Role="Consignments" Type="Self.Consignments" Multiplicity="1" />
-          <End Role="Goods" Type="Self.Goods" Multiplicity="*" />
+          <End Role="Consignments" Type="WarehouseModel.Store.Consignments" Multiplicity="1" />
+          <End Role="Goods" Type="WarehouseModel.Store.Goods" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Consignments">
               <PropertyRef Name="Id" />
@@ -97,8 +137,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_GoodsInCells_Cells">
-          <End Role="Cells" Type="Self.Cells" Multiplicity="1" />
-          <End Role="GoodsInCells" Type="Self.GoodsInCells" Multiplicity="*" />
+          <End Role="Cells" Type="WarehouseModel.Store.Cells" Multiplicity="1" />
+          <End Role="GoodsInCells" Type="WarehouseModel.Store.GoodsInCells" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Cells">
               <PropertyRef Name="Id" />
@@ -109,8 +149,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_GoodsInCells_Goods">
-          <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
-          <End Role="GoodsInCells" Type="Self.GoodsInCells" Multiplicity="*" />
+          <End Role="Goods" Type="WarehouseModel.Store.Goods" Multiplicity="1" />
+          <End Role="GoodsInCells" Type="WarehouseModel.Store.GoodsInCells" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Goods">
               <PropertyRef Name="Id" />
@@ -121,8 +161,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_LoginedUsers_Users">
-          <End Role="Users" Type="Self.Users" Multiplicity="1" />
-          <End Role="LoginedUsers" Type="Self.LoginedUsers" Multiplicity="*" />
+          <End Role="Users" Type="WarehouseModel.Store.Users" Multiplicity="1" />
+          <End Role="LoginedUsers" Type="WarehouseModel.Store.LoginedUsers" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Users">
               <PropertyRef Name="Id" />
@@ -133,8 +173,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_UserCart_Goods">
-          <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
-          <End Role="UserCarts" Type="Self.UserCarts" Multiplicity="*" />
+          <End Role="Goods" Type="WarehouseModel.Store.Goods" Multiplicity="1" />
+          <End Role="UserCarts" Type="WarehouseModel.Store.UserCarts" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Goods">
               <PropertyRef Name="Id" />
@@ -144,40 +184,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="WarehouseModelStoreContainer">
-          <EntitySet Name="Cells" EntityType="Self.Cells" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Consignments" EntityType="Self.Consignments" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Goods" EntityType="Self.Goods" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="GoodsInCells" EntityType="Self.GoodsInCells" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="LoginedUsers" EntityType="Self.LoginedUsers" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="UserCarts" EntityType="Self.UserCarts" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Warehouses" EntityType="Self.Warehouses" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Cells_Warehouses" Association="Self.FK_Cells_Warehouses">
-            <End Role="Warehouses" EntitySet="Warehouses" />
-            <End Role="Cells" EntitySet="Cells" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Goods_Consignments" Association="Self.FK_Goods_Consignments">
-            <End Role="Consignments" EntitySet="Consignments" />
-            <End Role="Goods" EntitySet="Goods" />
-          </AssociationSet>
-          <AssociationSet Name="FK_GoodsInCells_Cells" Association="Self.FK_GoodsInCells_Cells">
-            <End Role="Cells" EntitySet="Cells" />
-            <End Role="GoodsInCells" EntitySet="GoodsInCells" />
-          </AssociationSet>
-          <AssociationSet Name="FK_GoodsInCells_Goods" Association="Self.FK_GoodsInCells_Goods">
-            <End Role="Goods" EntitySet="Goods" />
-            <End Role="GoodsInCells" EntitySet="GoodsInCells" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LoginedUsers_Users" Association="Self.FK_LoginedUsers_Users">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="LoginedUsers" EntitySet="LoginedUsers" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserCart_Goods" Association="Self.FK_UserCart_Goods">
-            <End Role="Goods" EntitySet="Goods" />
-            <End Role="UserCarts" EntitySet="UserCarts" />
-          </AssociationSet>
-        </EntityContainer>
+        <Association Name="FK_UserCarts_Users">
+          <End Role="Users" Type="WarehouseModel.Store.Users" Multiplicity="1" />
+          <End Role="UserCarts" Type="WarehouseModel.Store.UserCarts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserCarts">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -214,6 +232,10 @@
           <AssociationSet Name="FK_LoginedUsers_Users" Association="WarehouseModel.FK_LoginedUsers_Users">
             <End Role="Users" EntitySet="Users" />
             <End Role="LoginedUsers" EntitySet="LoginedUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCarts_Users" Association="WarehouseModel.FK_UserCarts_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserCart" EntitySet="UserCarts" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Cell">
@@ -276,6 +298,8 @@
           <Property Name="GoodId" Type="Int32" Nullable="false" />
           <Property Name="Count" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Good" Relationship="WarehouseModel.FK_UserCart_Goods" FromRole="UserCarts" ToRole="Goods" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="WarehouseModel.FK_UserCarts_Users" FromRole="UserCart" ToRole="User" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -286,6 +310,7 @@
           <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="LoginedUsers" Relationship="WarehouseModel.FK_LoginedUsers_Users" FromRole="Users" ToRole="LoginedUsers" />
           <Property Name="LastLoginedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="UserCarts" Relationship="WarehouseModel.FK_UserCarts_Users" FromRole="User" ToRole="UserCart" />
         </EntityType>
         <EntityType Name="Warehouse">
           <Key>
@@ -294,6 +319,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="Cells" Relationship="WarehouseModel.FK_Cells_Warehouses" FromRole="Warehouses" ToRole="Cells" />
+          <Property Type="Boolean" Name="IsDefault" Nullable="false" />
         </EntityType>
         <Association Name="FK_Cells_Warehouses">
           <End Role="Warehouses" Type="WarehouseModel.Warehouse" Multiplicity="1" />
@@ -367,6 +393,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_UserCarts_Users">
+          <End Type="WarehouseModel.User" Role="User" Multiplicity="1" />
+          <End Type="WarehouseModel.UserCart" Role="UserCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserCart">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -423,6 +461,7 @@
           <EntitySetMapping Name="UserCarts">
             <EntityTypeMapping TypeName="WarehouseModel.UserCart">
               <MappingFragment StoreEntitySet="UserCarts">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="GoodId" ColumnName="GoodId" />
                 <ScalarProperty Name="Count" ColumnName="Count" />
@@ -442,6 +481,7 @@
           <EntitySetMapping Name="Warehouses">
             <EntityTypeMapping TypeName="WarehouseModel.Warehouse">
               <MappingFragment StoreEntitySet="Warehouses">
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
               </MappingFragment>

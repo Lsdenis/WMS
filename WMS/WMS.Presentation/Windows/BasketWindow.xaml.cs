@@ -1,28 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using WMS.BusinessLogic.ListViewItems;
+using WMS.BusinessLogic.UnitOfwork;
+using WMS.CustomControls.Controls.BaseWindow;
 
 namespace WMS.Presentation.Windows
 {
 	/// <summary>
 	/// Interaction logic for BasketWindow.xaml
 	/// </summary>
-	public partial class BasketWindow : Window
+	public partial class BasketWindow : BaseWindow
 	{
 		public BasketWindow()
 		{
 			InitializeComponent();
 			WindowStartupLocation = WindowStartupLocation.CenterScreen;
+		}
+
+		private void BasketWindow_OnLoaded(object sender, RoutedEventArgs e)
+		{
+			using (var uow = new UnitOfWork())
+			{
+				var userCarts = uow.UserCartsRepository.GetLVUserCarts(CurrentUser.Id);
+
+				AddUserCarts(userCarts);
+			}
+		}
+
+		private void AddUserCarts(IEnumerable<LVUserCarts> userCarts)
+		{
+			lvItems.Items.Clear();
+
+			foreach (var userCart in userCarts)
+			{
+				lvItems.Items.Add(userCart);
+			}
 		}
 	}
 }

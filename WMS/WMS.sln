@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WMS.BusinessLogic", "WMS.BusinessLogic\WMS.BusinessLogic.csproj", "{5315AF82-9E5A-4726-B869-E253C40F29A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WMS.Presentation", "WMS.Presentation\WMS.Presentation.csproj", "{887A45B0-A27F-48AD-9104-32E1D33FA549}"
@@ -17,6 +15,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WMS.CustomControls", "WMS.C
 	EndProjectSection
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "WMSModelingProject", "WMSModelingProject\WMSModelingProject.modelproj", "{A78156A6-3DCE-4E63-8FF4-CCDC079C11DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WMS.UnitTests", "WMS.UnitTests\WMS.UnitTests.csproj", "{64D1BD68-6321-45D2-9333-2913A1C23990}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5315AF82-9E5A-4726-B869-E253C40F29A3} = {5315AF82-9E5A-4726-B869-E253C40F29A3}
+		{78BF4692-2FE1-4E78-937C-F79FD82C889D} = {78BF4692-2FE1-4E78-937C-F79FD82C889D}
+		{887A45B0-A27F-48AD-9104-32E1D33FA549} = {887A45B0-A27F-48AD-9104-32E1D33FA549}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +45,10 @@ Global
 		{A78156A6-3DCE-4E63-8FF4-CCDC079C11DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A78156A6-3DCE-4E63-8FF4-CCDC079C11DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A78156A6-3DCE-4E63-8FF4-CCDC079C11DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D1BD68-6321-45D2-9333-2913A1C23990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D1BD68-6321-45D2-9333-2913A1C23990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D1BD68-6321-45D2-9333-2913A1C23990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D1BD68-6321-45D2-9333-2913A1C23990}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

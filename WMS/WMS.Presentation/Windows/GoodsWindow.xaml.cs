@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WMS.BusinessLogic.DataModel;
 using WMS.BusinessLogic.ListViewItems;
+using WMS.BusinessLogic.PickAndStoreObjects;
 using WMS.BusinessLogic.UnitOfwork;
 using WMS.CustomControls.Controls.BaseWindow;
 
@@ -101,6 +102,39 @@ namespace WMS.Presentation.Windows
 			}
 
 			lvGoods.Items.Remove(lvGoodItem);
+		}
+		private void BtnPick_OnClick(object sender, RoutedEventArgs e)
+		{
+			if (lvGoods.SelectedItems.Count <= 0)
+			{
+				return;
+			}
+
+			var result = MessageBox.Show("Are you sure?", "Warning!", MessageBoxButton.OKCancel);
+			if (result == MessageBoxResult.Cancel)
+			{
+				return;
+			}
+
+			var goodsItems = lvGoods.SelectedItems.Cast<LVGoodItem>().Select(gi => new PickAndStoreObject(gi.Id, null, CurrentUser.Id, gi.Count)).ToList();
+
+			using (var uow = new UnitOfWork())
+			{
+				foreach (var lvGoodItem in goodsItems)
+				{
+					if (!uow.PickAndStoreValidationService.IsPickValid(lvGoodItem))
+					{
+						return;
+					}
+				}
+
+				foreach (var lvGoodItem in goodsItems)
+				{
+					uow.PickAndStoreService.PickGood(lvGoodItem);
+				}
+
+				uow.Commit();
+			}
 		}
 	}
 }

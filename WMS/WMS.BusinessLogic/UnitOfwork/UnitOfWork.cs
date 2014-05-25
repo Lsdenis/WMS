@@ -2,6 +2,8 @@
 using WMS.BusinessLogic.DataModel;
 using WMS.BusinessLogic.Repository.Classes;
 using WMS.BusinessLogic.Repository.Interfaces;
+using WMS.BusinessLogic.Services.Classes;
+using WMS.BusinessLogic.Services.Interfaces;
 
 namespace WMS.BusinessLogic.UnitOfwork
 {
@@ -11,13 +13,15 @@ namespace WMS.BusinessLogic.UnitOfwork
 		private bool _disposed;
 
 		#region Repositories
-
 		private IUserRepository _userRepository;
 		private IGoodsRepository _goodsRepository;
 		private IConsignmentRepository _consignmentRepository;
 		private IGoodsInCellsRepository _goodsInCellsRepository;
 		private ICellsRepository _cellRepository;
 		private IWarehouseRepository _warehouseRepository;
+		private IPickAndStoreService _pickAndStoreService;
+		private IPickAndStoreValidationService _pickAndStoreValidationService;
+		private IUserCartsRepository _userCartsRepository;
 		#endregion
 
 		#region Properties
@@ -27,10 +31,7 @@ namespace WMS.BusinessLogic.UnitOfwork
 		}
 		public IGoodsRepository Goods
 		{
-			get
-			{
-				return _goodsRepository ?? (_goodsRepository = new GoodsRepository(_context));
-			}
+			get { return _goodsRepository ?? (_goodsRepository = new GoodsRepository(_context)); }
 		}
 		public IConsignmentRepository Consignments
 		{
@@ -47,6 +48,18 @@ namespace WMS.BusinessLogic.UnitOfwork
 		public IWarehouseRepository Warehouses
 		{
 			get { return _warehouseRepository ?? (_warehouseRepository = new WarehouseRepository(_context)); }
+		}
+		public IPickAndStoreService PickAndStoreService
+		{
+			get { return _pickAndStoreService ?? (_pickAndStoreService = new PickAndStoreService(_context)); }
+		}
+		public IPickAndStoreValidationService PickAndStoreValidationService
+		{
+			get { return _pickAndStoreValidationService ?? (_pickAndStoreValidationService = new PickAndStoreValidationService(_context)); }
+		}
+		public IUserCartsRepository UserCartsRepository
+		{
+			get { return _userCartsRepository ?? (_userCartsRepository = new UserCartsRepository(_context)); }
 		}
 		#endregion
 

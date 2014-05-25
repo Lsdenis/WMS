@@ -92,19 +92,27 @@
     </Compile>
     <Compile Include="ListViewItems\LVCellsItems.cs" />
     <Compile Include="ListViewItems\LVGoodItem.cs" />
+    <Compile Include="ListViewItems\LVUserCarts.cs" />
+    <Compile Include="PickAndStoreObjects\PickAndStoreObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Classes\CellRepository.cs" />
     <Compile Include="Repository\Classes\ConsignmentRepository.cs" />
     <Compile Include="Repository\Classes\GoodsInCellsRepository.cs" />
     <Compile Include="Repository\Classes\GoodsRepository.cs" />
+    <Compile Include="Repository\Classes\UserCartsRepository.cs" />
     <Compile Include="Repository\Classes\UserRepository.cs" />
     <Compile Include="Repository\Classes\WarehouseRepository.cs" />
     <Compile Include="Repository\Interfaces\ICellsRepository.cs" />
     <Compile Include="Repository\Interfaces\IConsignmentRepository.cs" />
     <Compile Include="Repository\Interfaces\IGoodsInCellsRepository.cs" />
     <Compile Include="Repository\Interfaces\IGoodsRepository.cs" />
+    <Compile Include="Repository\Interfaces\IUserCartsRepository.cs" />
     <Compile Include="Repository\Interfaces\IUserRepository.cs" />
     <Compile Include="Repository\Interfaces\IWarehouseRepository.cs" />
+    <Compile Include="Services\Classes\PickAndStoreService.cs" />
+    <Compile Include="Services\Classes\PickAndStoreValidationService.cs" />
+    <Compile Include="Services\Interfaces\IPickAndStoreService.cs" />
+    <Compile Include="Services\Interfaces\IPickAndStoreValidationService.cs" />
     <Compile Include="UnitOfwork\IUnitOfWork.cs" />
     <Compile Include="UnitOfwork\UnitOfWork.cs" />
   </ItemGroup>

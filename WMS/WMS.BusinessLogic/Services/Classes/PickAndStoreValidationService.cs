@@ -13,12 +13,12 @@ namespace WMS.BusinessLogic.Services.Classes
 			_context = context;
 		}
 
-		public bool IsPickValid(PickAndStoreObject pickAndStoreObject)
+		public bool IsPickValid(PickObject pickAndStoreObject)
 		{
 			return true;
 		}
 
-		public bool IsStoreValid(PickAndStoreObject pickAndStoreObject)
+		public bool IsStoreValid(PickObject pickAndStoreObject)
 		{
 			return true;	
 		}

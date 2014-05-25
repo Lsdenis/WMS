@@ -95,7 +95,17 @@ namespace WMS.Presentation.Windows
 			using (var uow = new UnitOfWork())
 			{
 				var good = uow.Goods.GetAllGoods().SingleOrDefault(gd => gd.Id == lvGoodItem.Id);
-				uow.GoodsInCells.DeleteGoodInCells(good);
+				if (good == null)
+				{
+					return;
+				}
+
+				if (good.GoodsInCells.Count != 0)
+				{
+					MessageBox.Show("You can not delete this good.");
+					return;
+				}
+
 				uow.Goods.DeleteGood(good);
 
 				uow.Commit();
@@ -110,31 +120,35 @@ namespace WMS.Presentation.Windows
 				return;
 			}
 
-			var result = MessageBox.Show("Are you sure?", "Warning!", MessageBoxButton.OKCancel);
-			if (result == MessageBoxResult.Cancel)
-			{
-				return;
-			}
+//			var result = MessageBox.Show("Are you sure?", "Warning!", MessageBoxButton.OKCancel);
+//			if (result == MessageBoxResult.Cancel)
+//			{
+//				return;
+//			}
 
-			var goodsItems = lvGoods.SelectedItems.Cast<LVGoodItem>().Select(gi => new PickAndStoreObject(gi.Id, null, CurrentUser.Id, gi.Count)).ToList();
+			var selectedGood = lvGoods.SelectedItem as LVGoodItem;
 
-			using (var uow = new UnitOfWork())
-			{
-				foreach (var lvGoodItem in goodsItems)
-				{
-					if (!uow.PickAndStoreValidationService.IsPickValid(lvGoodItem))
-					{
-						return;
-					}
-				}
+			var window = new PickWindow(selectedGood);
+			window.Owner = this;
+			window.ShowDialog();
 
-				foreach (var lvGoodItem in goodsItems)
-				{
-					uow.PickAndStoreService.PickGood(lvGoodItem);
-				}
-
-				uow.Commit();
-			}
+//			using (var uow = new UnitOfWork())
+//			{
+//				foreach (var lvGoodItem in goodsItems)
+//				{
+//					if (!uow.PickAndStoreValidationService.IsPickValid(lvGoodItem))
+//					{
+//						return;
+//					}
+//				}
+//
+//				foreach (var lvGoodItem in goodsItems)
+//				{
+//					uow.PickAndStoreService.PickGood(lvGoodItem);
+//				}
+//
+//				uow.Commit();
+//			}
 		}
 	}
 }

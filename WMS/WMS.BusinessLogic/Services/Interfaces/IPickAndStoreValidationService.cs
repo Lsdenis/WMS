@@ -4,7 +4,7 @@ namespace WMS.BusinessLogic.Services.Interfaces
 {
 	public interface IPickAndStoreValidationService
 	{
-		bool IsPickValid(PickAndStoreObject pickAndStoreObject);
-		bool IsStoreValid(PickAndStoreObject pickAndStoreObject);
+		bool IsPickValid(PickObject pickAndStoreObject);
+		bool IsStoreValid(PickObject pickAndStoreObject);
 	}
 }

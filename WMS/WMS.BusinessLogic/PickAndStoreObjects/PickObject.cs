@@ -1,13 +1,13 @@
 ﻿namespace WMS.BusinessLogic.PickAndStoreObjects
 {
-	public class PickAndStoreObject
+	public class PickObject
 	{
 		public int GoodId;
 		public int? CellId;
 		public int UserId;
 		public int Count;
 
-		public PickAndStoreObject(int goodId, int? cellId, int userId, int count)
+		public PickObject(int goodId, int? cellId, int userId, int count)
 		{
 			GoodId = goodId;
 			CellId = cellId;
@@ -15,7 +15,7 @@
 			Count = count;
 		}
 
-		public PickAndStoreObject()
+		public PickObject()
 		{
 			
 		}

@@ -75,7 +75,7 @@
             <PropertyRef Name="GoodId" />
             <PropertyRef Name="CellId" />
           </Key>
-          <Property Name="GoodId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GoodId" Type="int" Nullable="false" />
           <Property Name="CellId" Type="int" Nullable="false" />
           <Property Name="Value" Type="int" Nullable="false" />
         </EntityType>

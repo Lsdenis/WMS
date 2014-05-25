@@ -1,0 +1,17 @@
+﻿<baseWindow:BaseWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:baseWindow="clr-namespace:WMS.CustomControls.Controls.BaseWindow;assembly=WMS.CustomControls"
+        xmlns:Buttons="clr-namespace:WMS.CustomControls.Controls.Buttons;assembly=WMS.CustomControls" xmlns:CustomSearchTextBox="clr-namespace:WMS.CustomControls.Controls.CustomSearchTextBox;assembly=WMS.CustomControls" x:Class="WMS.Presentation.Windows.StoreWindow"
+        Title="StoreWindow" Height="177" Width="281" Loaded="StoreWindow_OnLoaded">
+    <Grid>
+
+        <Buttons:CustomSaveAndCloseButtons Name="ucSaveAndClose" IsSaveVisible="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,96,0,0" Width="167"/>
+        <ComboBox Name="cbCells" SelectionChanged="CbCells_OnSelectionChanged" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="80,12,0,0"/>
+        <TextBlock TextWrapping="Wrap" Text="Cell" Width="42" Margin="10,10,0,0" RenderTransformOrigin="0.51,-2.455" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top"/>
+        <TextBox Name="txtCount" HorizontalAlignment="Left" Height="23" Margin="80,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+        <TextBlock TextWrapping="Wrap" Text="Count" Width="42" Margin="10,68,0,0" RenderTransformOrigin="0.51,-2.455" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBlock Name="lblAvailable" TextWrapping="Wrap" Text="" Width="167" Margin="80,39,0,0" RenderTransformOrigin="0.51,-2.455" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBlock TextWrapping="Wrap" Text="Available" Width="52" Margin="10,39,0,0" RenderTransformOrigin="0.51,-2.455" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+    </Grid>
+</baseWindow:BaseWindow>

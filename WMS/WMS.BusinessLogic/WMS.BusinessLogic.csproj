@@ -64,6 +64,7 @@
     <Compile Include="DataModel\LoginedUser.cs">
       <DependentUpon>WMS.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataModel\Partials\Cell.cs" />
     <Compile Include="DataModel\Partials\Consignment.cs" />
     <Compile Include="DataModel\Partials\Warehouse.cs" />
     <Compile Include="DataModel\User.cs">
@@ -93,7 +94,8 @@
     <Compile Include="ListViewItems\LVCellsItems.cs" />
     <Compile Include="ListViewItems\LVGoodItem.cs" />
     <Compile Include="ListViewItems\LVUserCarts.cs" />
-    <Compile Include="PickAndStoreObjects\PickAndStoreObject.cs" />
+    <Compile Include="PickAndStoreObjects\PickObject.cs" />
+    <Compile Include="PickAndStoreObjects\StoreObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Classes\CellRepository.cs" />
     <Compile Include="Repository\Classes\ConsignmentRepository.cs" />

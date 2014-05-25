@@ -15,10 +15,17 @@ namespace WMS.Presentation.Windows
 		{
 			InitializeComponent();
 			WindowStartupLocation = WindowStartupLocation.CenterScreen;
+			ucSaveAndClose.CloseButtonClick = (sender, args) => Close();
 		}
 
 		private void BasketWindow_OnLoaded(object sender, RoutedEventArgs e)
 		{
+			SetUserCard();
+		}
+
+		private void SetUserCard()
+		{
+			lvItems.Items.Clear();
 			using (var uow = new UnitOfWork())
 			{
 				var userCarts = uow.UserCartsRepository.GetLVUserCarts(CurrentUser.Id);
@@ -35,6 +42,21 @@ namespace WMS.Presentation.Windows
 			{
 				lvItems.Items.Add(userCart);
 			}
+		}
+
+		private void BtnStore_OnClick(object sender, RoutedEventArgs e)
+		{
+			var selectedGood = lvItems.SelectedItem as LVUserCarts;
+			if (selectedGood == null)
+			{
+				return;
+			}
+
+			var window = new StoreWindow(selectedGood);
+			window.Owner = this;
+			window.ShowDialog();
+
+			SetUserCard();
 		}
 	}
 }

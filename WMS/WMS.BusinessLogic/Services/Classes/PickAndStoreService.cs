@@ -14,77 +14,89 @@ namespace WMS.BusinessLogic.Services.Classes
 			_context = context;
 		}
 
-		public void PickGood(PickAndStoreObject pickAndStoreObject)
+		public void PickGood(PickObject pickObject)
 		{
 			var userCart = new UserCart();
-			userCart.GoodId = pickAndStoreObject.GoodId;
-			userCart.UserId = pickAndStoreObject.UserId;
-			userCart.Count = pickAndStoreObject.Count;
+			userCart.GoodId = pickObject.GoodId;
+			userCart.UserId = pickObject.UserId;
+			userCart.Count = pickObject.Count;
 
-			if (pickAndStoreObject.CellId != null)
+			if (pickObject.CellId != null)
 			{
-				DeleteFromCell(pickAndStoreObject);
+				DeleteFromCell(pickObject);
 			}
 
-			_context.UserCarts.Add(userCart);
+			var existingUserCart =
+				_context.UserCarts.SingleOrDefault(
+					uc => uc.GoodId == pickObject.GoodId && uc.UserId == pickObject.UserId);
+			if (existingUserCart == null)
+			{
+				_context.UserCarts.Add(userCart);
+			}
+			else
+			{
+				existingUserCart.Count += pickObject.Count;
+			}
 		}
 
-		private void DeleteFromCell(PickAndStoreObject pickAndStoreObject)
+		private void DeleteFromCell(PickObject pickObject)
 		{
 			var selectedGood =
 				_context.GoodsInCells.SingleOrDefault(
-					gic => gic.CellId == pickAndStoreObject.CellId && gic.GoodId == pickAndStoreObject.GoodId);
+					gic => gic.CellId == pickObject.CellId && gic.GoodId == pickObject.GoodId);
 
 			if (selectedGood == null)
 			{
 				return;
 			}
 
-			if (selectedGood.Value == pickAndStoreObject.Count)
+			if (selectedGood.Value == pickObject.Count)
 			{
 				_context.GoodsInCells.Remove(selectedGood);
 			}
 			else
 			{
-				selectedGood.Value -= pickAndStoreObject.Count;
+				selectedGood.Value -= pickObject.Count;
 			}
 		}
 
-		public void StoreGood(PickAndStoreObject pickAndStoreObject)
+		public void StoreGood(StoreObject storeObject)
 		{
-			if (pickAndStoreObject.CellId == null)
+			var selectedCard = _context.UserCarts.SingleOrDefault(uc => uc.Id == storeObject.CardId);
+			if (selectedCard == null)
 			{
 				return;
 			}
 
 			var goodInCell = new GoodsInCell();
-			goodInCell.CellId = pickAndStoreObject.CellId.Value;
-			goodInCell.GoodId = pickAndStoreObject.GoodId;
-			goodInCell.Value = pickAndStoreObject.Count;
+			goodInCell.CellId = storeObject.CellId;
+			goodInCell.GoodId = selectedCard.GoodId;
+			goodInCell.Value = storeObject.Count;
 
-			DeleteFromUserCart(pickAndStoreObject);
+			AddToCell(goodInCell);
 
-			_context.GoodsInCells.Add(goodInCell);
-		}
-
-		private void DeleteFromUserCart(PickAndStoreObject pickAndStoreObject)
-		{
-			var currentUserCart =
-				_context.UserCarts.FirstOrDefault(
-					uc => uc.GoodId == pickAndStoreObject.GoodId && uc.UserId == pickAndStoreObject.UserId);
-
-			if (currentUserCart == null)
+			if (selectedCard.Count == storeObject.Count)
 			{
-				return;
-			}
-
-			if (pickAndStoreObject.Count == currentUserCart.Count)
-			{
-				_context.UserCarts.Remove(currentUserCart);
+				_context.UserCarts.Remove(selectedCard);
 			}
 			else
 			{
-				currentUserCart.Count -= pickAndStoreObject.Count;
+				selectedCard.Count -= storeObject.Count;
+			}
+		}
+
+		private void AddToCell(GoodsInCell goodInCell)
+		{
+			var existingGIC =
+				_context.GoodsInCells.SingleOrDefault(gic => gic.CellId == goodInCell.CellId && gic.GoodId == goodInCell.GoodId);
+
+			if (existingGIC == null)
+			{
+				_context.GoodsInCells.Add(goodInCell);
+			}
+			else
+			{
+				existingGIC.Value += goodInCell.Value;
 			}
 		}
 	}

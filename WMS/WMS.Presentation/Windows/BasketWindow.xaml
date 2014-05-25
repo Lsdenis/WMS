@@ -15,10 +15,10 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Buttons:CustomSaveAndCloseButtons IsSaveAndCloseVisible="False" IsSaveVisible="False" Height="Auto" Margin="285,305,0,19" Width="137" HorizontalAlignment="Left"/>
+        <Buttons:CustomSaveAndCloseButtons Name="ucSaveAndClose" IsSaveAndCloseVisible="False" IsSaveVisible="False" Height="20" Margin="285,305,0,0" Width="137" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
         <CustomSearchTextBox:CustomSearchTextBox HorizontalAlignment="Left" Margin="18,38,0,0" VerticalAlignment="Top" Width="404" Height="20"/>
-        <Button Name="btnStore" Content="Store" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="18,13,0,0"/>
+        <Button Name="btnStore" Click="BtnStore_OnClick" Content="Store" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="18,13,0,0"/>
 
     </Grid>
 </baseWindow:BaseWindow>

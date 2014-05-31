@@ -19,6 +19,7 @@
 
         <CustomSearchTextBox:CustomSearchTextBox HorizontalAlignment="Left" Margin="18,38,0,0" VerticalAlignment="Top" Width="404" Height="20"/>
         <Button Name="btnStore" Click="BtnStore_OnClick" Content="Store" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="18,13,0,0"/>
+        <Button x:Name="btnShip" Content="Ship" Click="BtnShip_OnClick" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="98,13,0,0"/>
 
     </Grid>
 </baseWindow:BaseWindow>

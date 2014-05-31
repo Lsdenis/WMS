@@ -1,0 +1,16 @@
+﻿<baseWindow:BaseWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:baseWindow="clr-namespace:WMS.CustomControls.Controls.BaseWindow;assembly=WMS.CustomControls"
+        xmlns:Buttons="clr-namespace:WMS.CustomControls.Controls.Buttons;assembly=WMS.CustomControls" x:Class="WMS.Presentation.Windows.ConsignmentWindow"
+        Title="ConsignmentWindow" Height="106" Width="241">
+    <Grid>
+
+        <Buttons:CustomSaveAndCloseButtons Name="ucSaveAndClose" IsSaveVisible="False" HorizontalAlignment="Left" Margin="38,38,0,0" VerticalAlignment="Top" Width="174"/>
+        <TextBlock  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,11,0,0"><Run Text="Name"/><InlineUIContainer>
+        	</InlineUIContainer></TextBlock>
+
+        <TextBox Name="txtName" Height="23" TextWrapping="Wrap" Text="" Margin="61,10,0,0" HorizontalAlignment="Left" Width="151" VerticalAlignment="Top"/>
+
+    </Grid>
+</baseWindow:BaseWindow>

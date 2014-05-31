@@ -1,4 +1,5 @@
-﻿using WMS.BusinessLogic.PickAndStoreObjects;
+﻿using WMS.BusinessLogic.DataModel;
+using WMS.BusinessLogic.PickAndStoreObjects;
 
 namespace WMS.BusinessLogic.Services.Interfaces
 {
@@ -6,5 +7,6 @@ namespace WMS.BusinessLogic.Services.Interfaces
 	{
 		void PickGood(PickObject pickObject);
 		void StoreGood(StoreObject storeObject);
+		void ShipGood(int userCartId);
 	}
 }

@@ -117,5 +117,13 @@ namespace WMS.Presentation.Windows
 			txtCount.Text = _good.Count.ToString();
 			txtName.Text = _good.Name;
 		}
+
+		private void BtnAdd_OnClick(object sender, RoutedEventArgs e)
+		{
+			var window = new ConsignmentWindow();
+			window.Owner = this;
+			window.ShowDialog();
+			SetConsignmentValues();
+		}
 	}
 }

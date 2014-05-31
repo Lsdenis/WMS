@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:baseWindow="clr-namespace:WMS.CustomControls.Controls.BaseWindow;assembly=WMS.CustomControls"
         xmlns:Buttons="clr-namespace:WMS.CustomControls.Controls.Buttons;assembly=WMS.CustomControls" x:Class="WMS.Presentation.Windows.GoodWindow"
-        Title="GoodWindow" Height="199" Width="261"
+        Title="GoodWindow" Height="199" Width="342"
 		Loaded="GoodWindow_OnLoaded">
 	<Grid>
 		<TextBox Name ="txtName" HorizontalAlignment="Left" Height="23" Margin="122,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
@@ -15,7 +15,8 @@
 		<TextBox Name="txtCount" HorizontalAlignment="Left" Height="23" Margin="122,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 		<Label Name="lblAddingDate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="122,93,0,0"/>
 
-		<Buttons:CustomSaveAndCloseButtons Name="ucSaveAndClose" IsSaveVisible="False" HorizontalAlignment="Left" Margin="74,133,0,0" VerticalAlignment="Top" Height="25" Width="168"/>
+		<Buttons:CustomSaveAndCloseButtons Name="ucSaveAndClose" IsSaveVisible="False" HorizontalAlignment="Left" Margin="154,133,0,0" VerticalAlignment="Top" Height="25" Width="168"/>
+        <Button Name="btnAdd" Click="BtnAdd_OnClick" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="247,66,0,0" Height="22"/>
 
-	</Grid>
+    </Grid>
 </baseWindow:BaseWindow>

@@ -85,6 +85,28 @@ namespace WMS.BusinessLogic.Services.Classes
 			}
 		}
 
+		public void ShipGood(int userCartId)
+		{
+			var userCart = _context.UserCarts.SingleOrDefault(gd => gd.Id == userCartId);
+			if (userCart == null)
+			{
+				return;
+			}
+
+			var good = _context.Goods.Single(gd => gd.Id == userCart.GoodId);
+			_context.UserCarts.Remove(userCart);
+
+			if (userCart.Count == good.Count)
+			{
+				_context.Goods.Remove(good);
+			}
+			else
+			{
+				good.Count -= userCart.Count;
+			}
+
+		}
+
 		private void AddToCell(GoodsInCell goodInCell)
 		{
 			var existingGIC =

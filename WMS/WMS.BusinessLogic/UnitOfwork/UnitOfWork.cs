@@ -57,7 +57,7 @@ namespace WMS.BusinessLogic.UnitOfwork
 		{
 			get { return _pickAndStoreValidationService ?? (_pickAndStoreValidationService = new PickAndStoreValidationService(_context)); }
 		}
-		public IUserCartsRepository UserCartsRepository
+		public IUserCartsRepository UserCarts
 		{
 			get { return _userCartsRepository ?? (_userCartsRepository = new UserCartsRepository(_context)); }
 		}

@@ -96,6 +96,9 @@
     <Compile Include="Windows\CellWindow.xaml.cs">
       <DependentUpon>CellWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ConsignmentWindow.xaml.cs">
+      <DependentUpon>ConsignmentWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\GoodsWindow.xaml.cs">
       <DependentUpon>GoodsWindow.xaml</DependentUpon>
     </Compile>
@@ -165,6 +168,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\CellWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ConsignmentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
